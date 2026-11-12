@@ -358,3 +358,9 @@
 
 ## 2026-11-12 — Publication authorized
 - User accepted the proposal to commit/push on a new branch (“Ein neuer branch wäre sinnvoll”). Publishing the tested PAL/NTSC implementation as feat/pal-auto-detection; main and the HDMI submodule remain unchanged. Hardware validation is still outstanding.
+
+## 2026-11-12 — Open-point audit
+- User requested review/research of outstanding repository items. Fork has no open GitHub issues; README/scratchbook/pin-reference contain stale and speculative claims.
+- Added docs/OPEN_POINTS.md with hardware-dependent brightness/D7, Mode7/TOUMEI, audio, frequency-counter, interlace/hires and PCB requirements. Verified INIDISP experimental documentation and SNES_TST RTL; universal pixel masking is not justified.
+- Audio changes: claim SM before allocation, cap DMA polling to 32 stereo pairs, omit 16 KiB buffer clear on restart, reset measured-rate diagnostic. ARM build and existing host suites passed; PIO/DMA bench validation remains outstanding.
+- Updated misleading README board/audio status and added an implementation-status warning to the speculative pin reference. Continuing on authorized feat/pal-auto-detection branch.

@@ -2,7 +2,7 @@
  * I2S Capture Implementation (Polling Mode)
  *
  * Uses PIO to capture I2S data from SNES S-DSP, polled from Core 1.
- * 24-bit I2S frames at ~32kHz (16-bit audio, MSB-justified).
+ * 24-bit I2S frames at ~32kHz (16-bit audio, right-justified).
  */
 
 #include "i2s_capture.h"
@@ -35,6 +35,10 @@ static uint32_t g_dma_buffer[I2S_DMA_BUFFER_SIZE] __attribute__((aligned(16384))
 
 bool i2s_capture_init(i2s_capture_t *cap, const i2s_capture_config_t *config, ap_ring_t *ring)
 {
+    // Reserve the requested SM before allocating DMA or changing pins.
+    // The dormant frequency counter must not silently reuse the audio SM.
+    if (pio_sm_is_claimed(config->pio, config->sm)) return false;
+    pio_sm_claim(config->pio, config->sm);
     cap->config = *config;
     cap->ring = ring;
     cap->samples_captured = 0;
@@ -124,8 +128,9 @@ void i2s_capture_start(i2s_capture_t *cap)
     // Jump to the start of the program (the sync preamble)
     pio_sm_exec(cap->config.pio, cap->config.sm, pio_encode_jmp(cap->pio_offset));
 
-    // Clear DMA buffer to avoid consuming stale words after a rearm.
-    memset(cap->dma_buffer, 0, I2S_DMA_BUFFER_SIZE * sizeof(uint32_t));
+    // No buffer clear: the reset read index and restarted DMA write address
+    // delimit fresh data. Clearing 16 KiB here stalls the HDMI background task.
+    cap->measured_rate = 0;
 
     // Start DMA
     dma_channel_set_write_addr(cap->dma_chan, cap->dma_buffer, true);
@@ -167,7 +172,10 @@ uint32_t i2s_capture_poll(i2s_capture_t *cap)
     if (cap->dma_buffer_idx != write_idx) {
         cap->last_activity_time = now;
 
-        while (cap->dma_buffer_idx != write_idx) {
+        // At most 32 stereo pairs per call; preserve the unread position.
+        // Large backlogs must not monopolize HDMI background service.
+        uint32_t processed = 0;
+        while (cap->dma_buffer_idx != write_idx && processed < 32U) {
             // PIO pushes R then L. Need 2 words per stereo sample.
             uint32_t next_idx = (cap->dma_buffer_idx + 1) & I2S_DMA_BUFFER_MASK;
             if (next_idx == write_idx)
@@ -176,6 +184,7 @@ uint32_t i2s_capture_poll(i2s_capture_t *cap)
             uint32_t raw_r = cap->dma_buffer[cap->dma_buffer_idx];
             uint32_t raw_l = cap->dma_buffer[next_idx];
             cap->dma_buffer_idx = (next_idx + 1) & I2S_DMA_BUFFER_MASK;
+            ++processed;
 
             // 16-bit right-justified: audio is in lower 16 bits
             audio_sample_t sample;

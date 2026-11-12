@@ -1,3 +1,10 @@
+> **Implementation status correction (2026-11-12):** This document includes
+> proposed hardware and unverified signal interpretations. Its brightness and
+> PIXEL_VALID “solutions” below are not implemented or validated firmware fixes.
+> Do not use the /OVER AND /TOUMEI proposal as a universal final-pixel mask.
+> D7 force-blank is a separate requirement, not covered by a four-bit brightness
+> latch. See [open-point audit](OPEN_POINTS.md) before using these proposals.
+
 # SNES Digital AV Mod - Complete Pin Reference
 
 > **Project:** SuperPico Digital (RP2350B + HDMI via HSTX)  

@@ -17,7 +17,7 @@ SuperPico Digital captures native 15-bit digital RGB directly from the S-PPU2's 
 
 - **Console**: 2-chip or 3-chip SNES (depending how you count :), e.g., SNS-CPU-GPM-01/02, SHVC-CPU-01.
 - **NOT compatible with 1-CHIP consoles.**
-- **Microcontroller**: Raspberry Pi Pico 2 (RP2350).
+- **Microcontroller**: RP2350B board exposing GPIO27–44 (build target: WeAct RP2350B Core). A standard Pico 2 does not expose these pins.
 - **Video Signals**: Requires soldering to PPU2 pins for digital RGB, Sync, and Clock.
 
 ## Wiring Reference
@@ -68,11 +68,19 @@ picotool load src/superpico-digital.uf2 -f && picotool reboot
 - [x] Jitter-free Pixel Capture
 - [x] HDMI Signal Stability (640x480)
 - [x] Horizontal Centering and Offset Fixes
-- [x] Full 15-bit RGB555 Color (32K LUT with per-channel bit-reversal → RGB565)
-- [ ] Digital Audio capture
+- [x] Full 15-bit RGB555 Color (small channel LUTs with bit reversal → RGB565)
+- [x] Digital audio capture and SRC implemented; physical audio quality validation remains open
 - [ ] Master Brightness Logic ($2100) - 6 GPIOs + 74HC4078
 - [ ] Mode 7 Transparency (/OVER) — 1 GPIO, PPU1 pin 94
 - [ ] Pixel Blanking (TOUMEI) — 1 GPIO, PPU2 pin 4
+
+## Open work and validation
+
+See [open-point audit](docs/OPEN_POINTS.md) for implementation status, required
+hardware signals, research sources and acceptance tests. PAL/NTSC automatic output
+is implemented on this branch; see [PAL implementation](docs/PAL_IMPLEMENTATION.md).
+Brightness, Mode 7 correction and TOUMEI handling are not implemented merely by
+adding the presently documented QSB: its wiring and signal semantics need validation.
 
 ## Credits & References
 
