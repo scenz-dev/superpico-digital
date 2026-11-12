@@ -24,7 +24,7 @@
 #define FAST_OSD_GLYPH_CROSS ((char)0x02)
 
 extern volatile bool osd_visible;
-extern uint16_t osd_framebuffer[OSD_BOX_H][OSD_BOX_W];
+void fast_osd_render_line(uint32_t line, uint16_t *dst);
 
 static inline void osd_show(void)
 {

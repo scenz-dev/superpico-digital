@@ -13,6 +13,7 @@
 #include "video/freq_counter.h"
 #include "video/snes_timing.h"
 #include "video/video_config.h"
+#include "video/pal_output.h"
 #include "config.h"
 #include "settings.h"
 #include "snes_pins.h"
@@ -45,6 +46,8 @@ static const video_mode_t *video_output_mode_for_reboot_mode(video_pipeline_rebo
         mode = VIDEO_PIPELINE_REBOOT_MODE_480P;
     }
 #endif
+    if (mode == VIDEO_PIPELINE_REBOOT_MODE_576P || mode == VIDEO_PIPELINE_REBOOT_MODE_AUTO_PAL)
+        return &superpico_mode_576p50;
     return (mode == VIDEO_PIPELINE_REBOOT_MODE_240P) ? &video_mode_240_p : &video_mode_480_p;
 }
 
@@ -55,7 +58,11 @@ static void configure_system_clock_for_mode(video_pipeline_reboot_mode_t mode)
         sys_clk_khz = SYS_CLK_720P_KHZ;
         vreg_set_voltage(VREG_VOLTAGE_1_30);
         sleep_ms(10);
-    } else if (mode == VIDEO_PIPELINE_REBOOT_MODE_480P) {
+    } else if (mode == VIDEO_PIPELINE_REBOOT_MODE_576P || mode == VIDEO_PIPELINE_REBOOT_MODE_AUTO_PAL) {
+        sys_clk_khz = 270000U;
+        vreg_set_voltage(VREG_VOLTAGE_1_30);
+        sleep_ms(10);
+    } else if (mode == VIDEO_PIPELINE_REBOOT_MODE_480P || mode == VIDEO_PIPELINE_REBOOT_MODE_AUTO) {
         sys_clk_khz = SYS_CLK_480P_KHZ;
         vreg_set_voltage(VREG_VOLTAGE_1_30);
         sleep_ms(10);
@@ -75,14 +82,30 @@ static void combined_background_task(void)
 
 int main(void)
 {
+    /* Hold BACK at power-on to recover a display that rejects 50 Hz. */
+    gpio_init(PIN_OSD_BTN_BACK);
+    gpio_set_dir(PIN_OSD_BTN_BACK, GPIO_IN);
+    gpio_pull_up(PIN_OSD_BTN_BACK);
     sleep_ms(1000);
+    const bool recovery_requested = !gpio_get(PIN_OSD_BTN_BACK);
 
 #if ENABLE_REBOOT_MODE_SWITCH
-    video_pipeline_reboot_mode_t boot_mode = VIDEO_PIPELINE_REBOOT_MODE_480P;
+    video_pipeline_reboot_mode_t boot_mode = VIDEO_PIPELINE_REBOOT_MODE_AUTO;
     const bool warm_reboot = video_pipeline_take_reboot_mode_boot_request(&boot_mode);
+    const bool save_requested = video_pipeline_take_save_request();
+#if ENABLE_SETTINGS_FLASH
+    if (warm_reboot && save_requested && !recovery_requested) {
+        superpico_settings_t confirmed;
+        settings_load(&confirmed);
+        confirmed.resolution = (uint8_t)boot_mode;
+        settings_save(&confirmed); /* Core 1 is not running yet. */
+    }
+#else
+    (void)save_requested;
+#endif
 #if ENABLE_OSD_RES_CONFIRM && ENABLE_OSD
     video_pipeline_reboot_mode_t previous_mode;
-    if (video_pipeline_take_pending_confirmation(&previous_mode)) {
+    if (video_pipeline_take_pending_confirmation(&previous_mode) && !recovery_requested) {
         menu_diag_experiment_arm_res_confirm(boot_mode, previous_mode);
     }
 #endif
@@ -90,20 +113,31 @@ int main(void)
     if (!warm_reboot) {
         superpico_settings_t persisted;
         settings_load(&persisted);
-        if (persisted.resolution <= (uint8_t)VIDEO_PIPELINE_REBOOT_MODE_720P) {
+        if (persisted.resolution <= (uint8_t)VIDEO_PIPELINE_REBOOT_MODE_576P) {
             boot_mode = (video_pipeline_reboot_mode_t)persisted.resolution;
 #if !ENABLE_REBOOT_MODE_SWITCH_720P
             if (boot_mode == VIDEO_PIPELINE_REBOOT_MODE_720P) {
-                boot_mode = VIDEO_PIPELINE_REBOOT_MODE_480P;
+                boot_mode = VIDEO_PIPELINE_REBOOT_MODE_AUTO;
             }
 #endif
         }
     }
 #endif
 #else
-    video_pipeline_reboot_mode_t boot_mode = VIDEO_PIPELINE_REBOOT_MODE_480P;
+    video_pipeline_reboot_mode_t boot_mode = VIDEO_PIPELINE_REBOOT_MODE_AUTO;
 #endif
 
+    if (recovery_requested) {
+        boot_mode = VIDEO_PIPELINE_REBOOT_MODE_480P;
+#if ENABLE_SETTINGS_FLASH
+        superpico_settings_t recovery;
+        bool valid = settings_load(&recovery);
+        if (!valid || recovery.resolution != (uint8_t)boot_mode) {
+            recovery.resolution = (uint8_t)boot_mode;
+            settings_save(&recovery);
+        }
+#endif
+    }
     video_pipeline_set_reboot_requested_mode(boot_mode);
     configure_system_clock_for_mode(boot_mode);
     stdio_init_all();
@@ -151,7 +185,7 @@ int main(void)
 #endif
 
     printf("Init video capture...\n");
-    video_capture_init(SNES_V_ACTIVE);
+    video_capture_init();
     sleep_ms(200);
     stdio_flush();
 

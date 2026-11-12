@@ -25,7 +25,7 @@ set(PICO_HDMI_PRECOMPOSED_ACTIVE_LINES OFF CACHE BOOL "" FORCE)
 set(PICO_HDMI_RT_RUNTIME_MODE_ATTRS ON CACHE BOOL "" FORCE)
 
 # Add pico_hdmi library
-add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/../lib/pico_hdmi ${CMAKE_CURRENT_BINARY_DIR}/pico_hdmi)
+include(${CMAKE_CURRENT_LIST_DIR}/../cmake/hdmi_pal.cmake)
 
 target_compile_definitions(pico_hdmi PRIVATE
     PICO_HDMI_480P_HSTX_CLK_DIV=2

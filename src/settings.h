@@ -7,7 +7,7 @@
 // Flash-backed persistent settings. Stored in the last 4 KB flash sector as a
 // magic+version+CRC record and written only during resolution-change reboot.
 typedef struct {
-    uint8_t resolution;   // video_pipeline_reboot_mode_t: 0=480p, 1=240p, 2=720p
+    uint8_t resolution;   // video_pipeline_reboot_mode_t: 0=480p, 1=240p, 2=720p, 3=Auto, 4=576p
     uint8_t reserved[31]; // future settings
 } superpico_settings_t;
 

@@ -63,15 +63,14 @@ static uint32_t src_process_drop(src_t *s, const audio_sample_t *in, uint32_t in
     uint32_t out_count = 0;
     uint32_t consumed = 0;
 
-    for (uint32_t i = 0; i < in_count && out_count < out_max; i++) {
-        consumed++;
-
-        // Bresenham: accumulate output_rate, emit when >= input_rate
-        s->accumulator += s->output_rate;
-        while (s->accumulator >= s->input_rate && out_count < out_max) {
+    while (out_count < out_max) {
+        if (s->accumulator >= s->input_rate) {
             s->accumulator -= s->input_rate;
-            out[out_count++] = in[i];
-        }
+            out[out_count++] = s->prev_sample;
+        } else if (consumed < in_count) {
+            s->prev_sample = in[consumed++];
+            s->accumulator += s->output_rate;
+        } else break;
     }
 
     *in_consumed = consumed;
@@ -84,63 +83,27 @@ static uint32_t src_process_linear(src_t *s, const audio_sample_t *in, uint32_t 
                                    audio_sample_t *out, uint32_t out_max,
                                    uint32_t *in_consumed)
 {
-    if (in_count == 0) {
-        *in_consumed = 0;
-        return 0;
-    }
-
-    // Phase increment per output sample (16.16 fixed-point)
-    // ratio = input_rate / output_rate
-    // For 32000/48000 = 0.667, phase_inc = 0xAAAA (~0.667 in 16.16)
-    uint32_t phase_inc = ((uint64_t)s->input_rate << 16) / s->output_rate;
-
-    uint32_t out_count = 0;
-    uint32_t in_idx = 0;
-
-    // Initialize with first sample if we don't have previous
-    if (!s->have_prev && in_count > 0) {
-        s->prev_sample = in[0];
+    uint32_t out_count = 0, in_idx = 0;
+    uint32_t step = ((uint64_t)s->input_rate << 16) / s->output_rate;
+    if (!s->have_prev && in_idx < in_count) {
+        s->prev_sample = in[in_idx++];
         s->have_prev = true;
-        in_idx = 1;
     }
-
-    while (out_count < out_max && in_idx < in_count) {
-        // Get integer and fractional parts of phase
-        uint32_t int_phase = s->phase >> 16;
-        uint32_t frac = s->phase & 0xFFFF;
-
-        // Advance input index based on integer phase
-        while (int_phase > 0 && in_idx < in_count) {
+    while (out_count < out_max && s->have_prev) {
+        while (s->phase >= 0x10000U && in_idx < in_count) {
             s->prev_sample = in[in_idx++];
-            int_phase--;
-            s->phase -= 0x10000;
+            s->phase -= 0x10000U;
         }
-
-        // If we've run out of input, stop
-        if (in_idx >= in_count && int_phase > 0) {
-            break;
-        }
-
-        // Get next sample for interpolation
-        audio_sample_t next;
-        if (in_idx < in_count) {
-            next = in[in_idx];
-        } else {
-            next = s->prev_sample;
-        }
-
-        // Linear interpolation: out = prev + (next - prev) * frac / 65536
-        int32_t diff_l = next.left - s->prev_sample.left;
-        int32_t diff_r = next.right - s->prev_sample.right;
-
-        out[out_count].left = s->prev_sample.left + ((diff_l * (int32_t)frac) >> 16);
-        out[out_count].right = s->prev_sample.right + ((diff_r * (int32_t)frac) >> 16);
-        out_count++;
-
-        // Advance phase
-        s->phase += phase_inc;
+        /* Need a real next sample; don't synthesize one at a chunk boundary. */
+        if (in_idx == in_count || s->phase >= 0x10000U) break;
+        const audio_sample_t next = in[in_idx];
+        const int32_t dl = (int32_t)next.left - s->prev_sample.left;
+        const int32_t dr = (int32_t)next.right - s->prev_sample.right;
+        out[out_count].left = s->prev_sample.left + (((int64_t)dl * s->phase) >> 16);
+        out[out_count].right = s->prev_sample.right + (((int64_t)dr * s->phase) >> 16);
+        ++out_count;
+        s->phase += step;
     }
-
     *in_consumed = in_idx;
     return out_count;
 }
@@ -148,6 +111,10 @@ static uint32_t src_process_linear(src_t *s, const audio_sample_t *in, uint32_t 
 uint32_t src_process(src_t *s, const audio_sample_t *in, uint32_t in_count,
                      audio_sample_t *out, uint32_t out_max, uint32_t *in_consumed)
 {
+    if (!s->input_rate || !s->output_rate || !out_max) {
+        *in_consumed = 0;
+        return 0;
+    }
     switch (s->mode) {
         case SRC_MODE_NONE:
             return src_process_none(in, in_count, out, out_max, in_consumed);

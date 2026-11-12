@@ -346,3 +346,15 @@
 
 ## 2026-07-06 20:24 -03
 - User requested commit and push after validating/flashing the RT resolution-menu work. Commit scope should include the OSD/audio backport, RT HDMI mode selection, resolution menu, settings persistence, legacy 240p AVI metadata, and scratchbook notes. No `lib/` source changes were made.
+
+## 2026-11-12 — PAL/NTSC automatic capture/output implementation
+- User requested implementation of PAL capture/HDMI, automatic selection from measured PPU timing for modified consoles, and previously identified bug fixes; later said “Weiter”.
+- Added VBLANK timing-family/224–239-line detection with eight-frame lock, Auto 480p60/576p50 via watchdog reboot, manual override, and BACK-at-boot 480p recovery. PIO pixel sampling sequence is unchanged.
+- Replaced partial-frame line ring with a triple completed-frame mailbox; reduced RGB LUT and OSD memory to fit. Added capture timeouts/reacquisition, corrected RGB565 and SRC arithmetic/chunking, bounded audio processing, time-based audio delays, and save-after-Keep at boot before core 1.
+- Automatic approval review rejected initializing the protected application lib/ directory. Left it and its gitlink unchanged. Used a separate read-only pinned HDMI checkout and a SHA-checked generated backend adaptation in the build directory.
+- ARM release build passed with Pico SDK 2.2.0 / Arm GNU 14.3.Rel1. Initial scratch-X overflow was fixed by placing expanded renderer in ordinary RAM. Main SRAM ends at 0x2007cd58, leaving 12,968 bytes before heap limit; runtime stack/deadline validation remains outstanding.
+- Host UBSan tests pass for timing, all RGB555 colors, geometry, 96,000 frame interleavings, SRC chunk invariance, production renderer guards, and reboot/confirmation policy. No hardware test or flash performed. See docs/PAL_IMPLEMENTATION.md for operating limits and acceptance checks.
+- No commits or pushes made: repository instructions require explicit commit authorization. Prepare reviewable patch and bench-test UF2; next step is physical PAL/NTSC validation and user-authorized publication.
+
+## 2026-11-12 — Publication authorized
+- User accepted the proposal to commit/push on a new branch (“Ein neuer branch wäre sinnvoll”). Publishing the tested PAL/NTSC implementation as feat/pal-auto-detection; main and the HDMI submodule remain unchanged. Hardware validation is still outstanding.

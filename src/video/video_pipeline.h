@@ -16,8 +16,15 @@ typedef enum {
     VIDEO_PIPELINE_REBOOT_MODE_480P = 0,
     VIDEO_PIPELINE_REBOOT_MODE_240P = 1,
     VIDEO_PIPELINE_REBOOT_MODE_720P = 2,
+    VIDEO_PIPELINE_REBOOT_MODE_AUTO = 3,
+    VIDEO_PIPELINE_REBOOT_MODE_576P = 4,
+    /* Watchdog-only state: Auto policy currently driving 576p50. */
+    VIDEO_PIPELINE_REBOOT_MODE_AUTO_PAL = 5,
 } video_pipeline_reboot_mode_t;
 
+void video_pipeline_follow_input(input_region_t region);
+void video_pipeline_request_reboot_mode_confirmed(video_pipeline_reboot_mode_t mode);
+bool video_pipeline_take_save_request(void);
 void video_pipeline_request_reboot_mode(video_pipeline_reboot_mode_t mode);
 void video_pipeline_request_reboot_mode_pending(video_pipeline_reboot_mode_t mode,
                                                 video_pipeline_reboot_mode_t previous);

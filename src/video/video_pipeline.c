@@ -1,6 +1,7 @@
 #include "video_pipeline.h"
 #include "config.h"
 #include "snes_timing.h"
+#include "video_geometry.h"
 #include "pico_hdmi/video_output_rt.h"
 #include "hardware/structs/watchdog.h"
 #include "hardware/watchdog.h"
@@ -25,13 +26,12 @@
 #define REBOOT_MODE_BOOT_MAGIC 0x53505253U
 #define REBOOT_MODE_BOOT_CHECK_XOR 0xa5a55a5aU
 #define REBOOT_PENDING_MAGIC 0x53505000U
-#if ENABLE_REBOOT_MODE_SWITCH_720P
-#define REBOOT_MODE_MAX VIDEO_PIPELINE_REBOOT_MODE_720P
-#else
-#define REBOOT_MODE_MAX VIDEO_PIPELINE_REBOOT_MODE_240P
-#endif
+#define REBOOT_MODE_MAX VIDEO_PIPELINE_REBOOT_MODE_AUTO_PAL
+#define REBOOT_SAVE_MAGIC 0x53504753U
+static bool s_auto_suspended;
+static video_pipeline_reboot_mode_t s_actual_boot_mode;
 
-static video_pipeline_reboot_mode_t s_reboot_requested_mode = VIDEO_PIPELINE_REBOOT_MODE_480P;
+static volatile video_pipeline_reboot_mode_t s_reboot_requested_mode = VIDEO_PIPELINE_REBOOT_MODE_480P;
 
 static inline uint32_t reboot_mode_boot_check(uint32_t mode)
 {
@@ -42,7 +42,7 @@ static inline uint32_t reboot_mode_boot_check(uint32_t mode)
 line_ring_t g_line_ring __attribute__((aligned(64)));
 
 void video_pipeline_init(void) {
-    memset(&g_line_ring, 0, sizeof(g_line_ring));
+    line_ring_init();
 }
 
 static inline void __scratch_y("")
@@ -104,25 +104,26 @@ typedef void (*pixel_scale_fn_t)(uint32_t *dst, const uint16_t *src, int count);
 #if ENABLE_OSD
 static bool s_osd_visible_latched = false;
 
-static inline bool __scratch_x("")
+static inline bool __attribute__((section(".time_critical.video_pipeline")))
 osd_line_active(uint32_t source_line) {
     return s_osd_visible_latched && source_line >= OSD_BOX_Y && source_line < (OSD_BOX_Y + OSD_BOX_H);
 }
 
-static inline void __scratch_x("")
+static inline void __attribute__((section(".time_critical.video_pipeline")))
 draw_osd_line_scaled(uint32_t *dst, uint32_t source_line, uint32_t osd_x_words, pixel_scale_fn_t scale_pixels) {
-    const uint16_t *osd_src = osd_framebuffer[source_line - OSD_BOX_Y];
+    uint16_t osd_src[OSD_BOX_W] __attribute__((aligned(4)));
+    fast_osd_render_line(source_line - OSD_BOX_Y, osd_src);
     scale_pixels(dst + osd_x_words, osd_src, OSD_BOX_W);
 }
 #else
-static inline bool __scratch_x("")
+static inline bool __attribute__((section(".time_critical.video_pipeline")))
 osd_line_active(uint32_t source_line) {
     (void)source_line;
     return false;
 }
 #endif
 
-void __scratch_x("") scanline_callback(uint32_t v_scanline, uint32_t active_line, uint32_t *dst)
+void __attribute__((section(".time_critical.video_pipeline"))) scanline_callback(uint32_t v_scanline, uint32_t active_line, uint32_t *dst)
 {
     (void)v_scanline;
 
@@ -133,11 +134,7 @@ void __scratch_x("") scanline_callback(uint32_t v_scanline, uint32_t active_line
     const pixel_scale_fn_t scale_pixels =
         mode_is_720p ? triple_pixels_fast : mode_is_240p ? quadruple_pixels_fast : double_pixels_fast;
 
-    if (mode_is_720p && ((active_line % 3U) != 0U)) {
-        return;
-    }
-
-    const uint32_t source_line = mode_is_720p ? (active_line / 3U) : mode_is_240p ? active_line : (active_line >> 1);
+    const uint32_t output_source_line = mode_is_720p ? (active_line / 3U) : mode_is_240p ? active_line : (active_line >> 1);
     const uint32_t canvas_words = (SNES_CANVAS_WIDTH * h_scale) / 2U;
     const uint32_t canvas_margin_words = (h_words > canvas_words) ? ((h_words - canvas_words) / 2U) : 0U;
     const uint32_t image_words = (SNES_H_ACTIVE * h_scale) / 2U;
@@ -147,18 +144,19 @@ void __scratch_x("") scanline_callback(uint32_t v_scanline, uint32_t active_line
     const uint32_t osd_w_words = ((uint32_t)OSD_BOX_W * h_scale) / 2U;
 #endif
 
+    const uint32_t canvas_height = video_output_active_mode->v_active_lines / (mode_is_720p ? 3U : mode_is_240p ? 1U : 2U);
+    const uint32_t osd_top = (canvas_height - SNES_CANVAS_HEIGHT) / 2U;
+    const uint32_t source_line = output_source_line >= osd_top ? output_source_line - osd_top : UINT32_MAX;
     const bool osd_active = osd_line_active(source_line);
-
     uint16_t fallback_color = OVERSCAN_COLOR_RGB565;
     const uint16_t *src = NULL;
-    const uint32_t snes_line_u32 = source_line - V_OFFSET;
-    if (source_line < SNES_CANVAS_HEIGHT && snes_line_u32 < SNES_V_ACTIVE) {
-        const uint16_t snes_line = (uint16_t)snes_line_u32;
-        if (line_ring_ready(snes_line)) {
-            src = line_ring_read_ptr(snes_line);
-        } else {
-            fallback_color = NO_SIGNAL_COLOR_RGB565;
-        }
+    const uint32_t height = line_ring_height();
+    const int32_t row = video_source_row(active_line, video_output_active_mode->v_active_lines,
+                                         height, mode_is_720p ? 3U : mode_is_240p ? 1U : 2U);
+    if (row >= 0) {
+        uint16_t y = (uint16_t)row;
+        if (line_ring_ready(y)) src = line_ring_read_ptr(y);
+        else fallback_color = NO_SIGNAL_COLOR_RGB565;
     }
 
 #if ENABLE_OSD
@@ -191,7 +189,7 @@ void __scratch_x("") scanline_callback(uint32_t v_scanline, uint32_t active_line
     fill_rgb565(dst + image_x_words + image_words, h_words - image_x_words - image_words, OVERSCAN_COLOR_RGB565);
 }
 
-void __scratch_x("") vsync_callback(void) {
+void __attribute__((section(".time_critical.video_pipeline"))) vsync_callback(void) {
     line_ring_output_vsync();
 #if ENABLE_AUDIO
     audio_pipeline_step();
@@ -241,6 +239,35 @@ void video_pipeline_request_reboot_mode_pending(video_pipeline_reboot_mode_t mod
     }
 }
 
+void video_pipeline_request_reboot_mode_confirmed(video_pipeline_reboot_mode_t mode)
+{
+    if (mode > VIDEO_PIPELINE_REBOOT_MODE_576P) mode = VIDEO_PIPELINE_REBOOT_MODE_AUTO;
+    watchdog_hw->scratch[0] = REBOOT_MODE_BOOT_MAGIC;
+    watchdog_hw->scratch[1] = mode;
+    watchdog_hw->scratch[2] = reboot_mode_boot_check(mode);
+    watchdog_hw->scratch[3] = REBOOT_SAVE_MAGIC;
+    __dmb();
+    watchdog_reboot(0, 0, 10);
+    while (true) tight_loop_contents();
+}
+
+bool video_pipeline_take_save_request(void)
+{
+    if (watchdog_hw->scratch[3] != REBOOT_SAVE_MAGIC) return false;
+    watchdog_hw->scratch[3] = 0;
+    return true;
+}
+
+void video_pipeline_follow_input(input_region_t region)
+{
+    if (s_auto_suspended || s_reboot_requested_mode != VIDEO_PIPELINE_REBOOT_MODE_AUTO ||
+        region == INPUT_UNKNOWN) return;
+    bool want_pal = region == INPUT_50HZ;
+    bool is_pal = s_actual_boot_mode == VIDEO_PIPELINE_REBOOT_MODE_AUTO_PAL;
+    if (want_pal != is_pal)
+        video_pipeline_request_reboot_mode(want_pal ? VIDEO_PIPELINE_REBOOT_MODE_AUTO_PAL : VIDEO_PIPELINE_REBOOT_MODE_AUTO);
+}
+
 video_pipeline_reboot_mode_t video_pipeline_reboot_requested_mode(void)
 {
     return s_reboot_requested_mode;
@@ -251,7 +278,8 @@ void video_pipeline_set_reboot_requested_mode(video_pipeline_reboot_mode_t mode)
     if (mode > REBOOT_MODE_MAX) {
         mode = VIDEO_PIPELINE_REBOOT_MODE_480P;
     }
-    s_reboot_requested_mode = mode;
+    s_actual_boot_mode = mode;
+    s_reboot_requested_mode = mode == VIDEO_PIPELINE_REBOOT_MODE_AUTO_PAL ? VIDEO_PIPELINE_REBOOT_MODE_AUTO : mode;
 }
 
 bool video_pipeline_take_reboot_mode_boot_request(video_pipeline_reboot_mode_t *mode_out)
@@ -270,7 +298,7 @@ bool video_pipeline_take_reboot_mode_boot_request(video_pipeline_reboot_mode_t *
     if (mode_out) {
         *mode_out = (video_pipeline_reboot_mode_t)mode;
     }
-    s_reboot_requested_mode = (video_pipeline_reboot_mode_t)mode;
+    video_pipeline_set_reboot_requested_mode((video_pipeline_reboot_mode_t)mode);
     return true;
 }
 
@@ -285,6 +313,7 @@ bool video_pipeline_take_pending_confirmation(video_pipeline_reboot_mode_t *prev
         (check != ((mode ^ 0xAU) & 0xFU))) {
         return false;
     }
+    s_auto_suspended = true;
     if (previous_mode) {
         *previous_mode = (video_pipeline_reboot_mode_t)mode;
     }

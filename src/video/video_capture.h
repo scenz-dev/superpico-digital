@@ -6,7 +6,7 @@
 /**
  * Initialize SNES video capture hardware
  */
-void video_capture_init(uint32_t height);
+void video_capture_init(void);
 
 /**
  * Run video capture loop (never returns)
@@ -17,5 +17,7 @@ void video_capture_run(void);
  * Get current captured frame count
  */
 uint32_t video_capture_get_frame_count(void);
+
+uint32_t video_capture_get_profile(void);
 
 #endif // VIDEO_CAPTURE_H

@@ -3,7 +3,9 @@
 #if ENABLE_AUDIO
 #include "audio/audio_pipeline.h"
 #endif
-#include "freq_counter.h"
+#include "input_timing.h"
+#include "pixel_convert.h"
+#include "hardware/sync.h"
 #include "hardware/dma.h"
 #include "hardware/pio.h"
 #include "pico/stdlib.h"
@@ -18,7 +20,34 @@
 // State
 // =============================================================================
 
-static uint32_t g_snes_height = 0;
+static input_detector_t g_detector;
+static volatile uint32_t g_profile;
+static volatile uint32_t g_active_us;
+static uint32_t g_last_fall_us;
+static bool g_have_fall, g_have_rise;
+
+/* Only VBLANK edges interrupt the CPU (100/120 IRQ/s). PCLK stays in PIO.
+ * Unsigned differences remain correct across the 32-bit microsecond wrap. */
+static void vblank_irq(uint gpio, uint32_t events) {
+  if (gpio != PIN_SNES_VBLANK) return;
+  uint32_t now = time_us_32();
+  if (events == GPIO_IRQ_EDGE_RISE && g_have_fall) {
+    g_active_us = now - g_last_fall_us;
+    g_have_rise = true;
+  } else if (events == GPIO_IRQ_EDGE_FALL) {
+    if (g_have_fall && g_have_rise)
+      input_detector_observe(&g_detector, now - g_last_fall_us, g_active_us);
+    else input_detector_reset(&g_detector);
+    g_profile = g_detector.locked;
+    g_last_fall_us = now;
+    g_have_fall = true;
+    g_have_rise = false;
+  } else {
+    input_detector_reset(&g_detector);
+    g_profile = 0;
+    g_have_fall = g_have_rise = false;
+  }
+}
 static PIO g_pio_snes = pio1;
 
 static uint g_sm_pixel = 0;
@@ -39,26 +68,19 @@ static volatile uint32_t g_frame_count = 0;
 // PCB wires MSB (R4/G4/B4) to lower GPIO, so each 5-bit channel is bit-reversed.
 // Same pattern as neopico-hd.
 
-static inline uint32_t snes_reverse_5bit(uint32_t x) {
-  return ((x & 1U) << 4) | ((x & 2U) << 2) | (x & 4U) | ((x & 8U) >> 2) |
-         ((x & 16U) >> 4);
-}
-
-static inline uint16_t snes_pack_rgb565(uint32_t r5, uint32_t g5,
-                                        uint32_t b5) {
-  return (uint16_t)((r5 << 11) | (g5 << 6) | (g5 >> 4) | b5);
-}
-
-// 32K LUT: raw RGB555 (with reversed bits) -> corrected RGB565.
-static uint16_t g_pixel_lut[32768] __attribute__((aligned(4)));
-
+/* Three small channel LUTs replace the 64 KiB full-color LUT. */
+static uint16_t g_red[32], g_green[32], g_blue[32];
 static void generate_pixel_lut(void) {
-  for (uint32_t idx = 0; idx < 32768U; idx++) {
-    uint32_t b5 = snes_reverse_5bit(idx & 0x1F);
-    uint32_t g5 = snes_reverse_5bit((idx >> 5) & 0x1F);
-    uint32_t r5 = snes_reverse_5bit((idx >> 10) & 0x1F);
-    g_pixel_lut[idx] = snes_pack_rgb565(r5, g5, b5);
+  for (uint32_t i = 0; i < 32; ++i) {
+    uint32_t c = snes_reverse_5bit(i);
+    g_red[i] = snes_pack_rgb565(c, 0, 0);
+    g_green[i] = snes_pack_rgb565(0, c, 0);
+    g_blue[i] = snes_pack_rgb565(0, 0, c);
   }
+}
+static inline uint16_t convert_pixel(uint32_t raw) {
+  return g_red[(raw >> 12) & 31U] | g_green[(raw >> 7) & 31U] |
+         g_blue[(raw >> 2) & 31U];
 }
 
 // =============================================================================
@@ -82,8 +104,7 @@ static void video_capture_reset_hardware(void) {
 // Public API
 // =============================================================================
 
-void video_capture_init(uint32_t height) {
-  g_snes_height = height;
+void video_capture_init(void) {
   generate_pixel_lut();
 
   pio_clear_instruction_memory(g_pio_snes);
@@ -121,83 +142,108 @@ void video_capture_init(uint32_t height) {
   channel_config_set_dreq(&dc, pio_get_dreq(g_pio_snes, g_sm_pixel, false));
   dma_channel_configure(g_dma_chan, &dc, g_line_buffers[0],
                         &g_pio_snes->rxf[g_sm_pixel], SNES_H_ACTIVE, false);
+  gpio_set_irq_enabled_with_callback(PIN_SNES_VBLANK,
+      GPIO_IRQ_EDGE_RISE | GPIO_IRQ_EDGE_FALL, true, vblank_irq);
+}
+
+static bool wait_vblank(bool level, uint32_t timeout_us) {
+  uint32_t start = time_us_32();
+  while (gpio_get(PIN_SNES_VBLANK) != level) {
+    if ((uint32_t)(time_us_32() - start) >= timeout_us) return false;
+    tight_loop_contents();
+  }
+  return true;
+}
+
+static void capture_stop(void) {
+  pio_sm_set_enabled(g_pio_snes, g_sm_pixel, false);
+  dma_channel_abort(g_dma_chan);
+  pio_sm_clear_fifos(g_pio_snes, g_sm_pixel);
+  pio_interrupt_clear(g_pio_snes, 4);
+}
+
+static void capture_lost(void) {
+  capture_stop();
+  line_ring_invalidate();
+  uint32_t irq = save_and_disable_interrupts();
+  input_detector_reset(&g_detector);
+  g_profile = 0;
+  g_have_fall = g_have_rise = false;
+  restore_interrupts(irq);
 }
 
 void video_capture_run(void) {
-#if ENABLE_AUDIO && ENABLE_AUDIO_REARM_ON_VIDEO_REACQUIRE
-  uint32_t last_frame_ms = 0;
-#endif
-  while (1) {
-    // 1. Detect VSync Falling Edge (Active Video Start) in C
-    while (!gpio_get(PIN_SNES_VBLANK))
-      tight_loop_contents(); // Wait for Blanking
-    while (gpio_get(PIN_SNES_VBLANK))
-      tight_loop_contents(); // Wait for Active Video
-
-    g_frame_count++;
-#if ENABLE_AUDIO && ENABLE_AUDIO_REARM_ON_VIDEO_REACQUIRE
-    {
-      const uint32_t now_ms = to_ms_since_boot(get_absolute_time());
-      if (last_frame_ms != 0 && (now_ms - last_frame_ms) > 250U) {
-        audio_pipeline_request_rearm();
-      }
-      last_frame_ms = now_ms;
+  bool reacquiring = true;
+  while (true) {
+    if (!wait_vblank(true, 100000U) || !wait_vblank(false, 100000U)) {
+      capture_lost();
+      reacquiring = true;
+      continue;
     }
-#endif
-    if (g_frame_count % 60 == 0) {
-      gpio_xor_mask(1ul << PICO_DEFAULT_LED_PIN);
+    uint32_t profile = g_profile;
+    if (!profile) {
+      line_ring_invalidate();
+      continue;
     }
-    // freq_counter_update(); // TODO: enable after debugging
-
-    // 2. Lightweight PIO reset — JMP back to wrap_target (skips pull/mov y)
-    pio_sm_set_enabled(g_pio_snes, g_sm_pixel, false);
-    pio_sm_clear_fifos(g_pio_snes, g_sm_pixel);
-    pio_sm_exec(g_pio_snes, g_sm_pixel,
-                pio_encode_jmp(g_offset_pixel + 2));
-    pio_sm_set_enabled(g_pio_snes, g_sm_pixel, true);
+#if ENABLE_REBOOT_MODE_SWITCH
+    video_pipeline_follow_input(input_region(profile));
+#endif
+#if ENABLE_AUDIO && ENABLE_AUDIO_REARM_ON_VIDEO_REACQUIRE
+    if (reacquiring) audio_pipeline_request_rearm();
+#endif
+    reacquiring = false;
+    const uint16_t height = input_height(profile);
+    line_ring_vsync();
+    capture_stop();
+    video_capture_reset_hardware();
     dma_channel_set_trans_count(g_dma_chan, SNES_H_ACTIVE, false);
     dma_channel_set_write_addr(g_dma_chan, g_line_buffers[0], true);
-
-    // Signal VSYNC to Core 1
-    line_ring_vsync();
-
-    // 3. Release PIO to start capturing lines
-    pio_interrupt_clear(g_pio_snes, 4);
     pio_sm_exec(g_pio_snes, g_sm_pixel, pio_encode_irq_set(false, 4));
 
+    bool complete = true;
     uint32_t buf_idx = 0;
-    for (uint16_t y = 0; y < g_snes_height; y++) {
-      uint16_t *dst = line_ring_write_ptr(y);
-
-      dma_channel_wait_for_finish_blocking(g_dma_chan);
-
-      uint32_t *captured_buf = g_line_buffers[buf_idx];
+    for (uint16_t y = 0; y < height; ++y) {
+      uint32_t start = time_us_32();
+      while (dma_channel_is_busy(g_dma_chan)) {
+        if ((uint32_t)(time_us_32() - start) >= 200U) {
+          complete = false;
+          break;
+        }
+      }
+      if (!complete) break;
+      uint32_t *src = g_line_buffers[buf_idx];
       buf_idx ^= 1U;
-
-      if (y + 1 < g_snes_height) {
+      if (y + 1U < height) {
         dma_channel_set_trans_count(g_dma_chan, SNES_H_ACTIVE, false);
         dma_channel_set_write_addr(g_dma_chan, g_line_buffers[buf_idx], true);
       }
-
-      // Unrolled 4-pixel conversion (matches neopico-hd)
-      const uint16_t *lut = g_pixel_lut;
-      const uint32_t *src = captured_buf;
-      int remaining = SNES_H_ACTIVE;
-      while (remaining >= 4) {
-        dst[0] = lut[(src[0] >> 2) & 0x7FFF];
-        dst[1] = lut[(src[1] >> 2) & 0x7FFF];
-        dst[2] = lut[(src[2] >> 2) & 0x7FFF];
-        dst[3] = lut[(src[3] >> 2) & 0x7FFF];
-        dst += 4;
-        src += 4;
-        remaining -= 4;
+      /* Reject a line if capture has crossed into vertical blanking. */
+      if ((src[0] | src[SNES_H_ACTIVE - 1U]) & 1U) {
+        complete = false;
+        break;
       }
-      while (remaining-- > 0)
-        *dst++ = lut[(*src++ >> 2) & 0x7FFF];
-
-      line_ring_commit(y + 1);
+      uint16_t *dst = line_ring_write_ptr(y);
+      for (uint32_t x = 0; x < SNES_H_ACTIVE; x += 4U) {
+        dst[x] = convert_pixel(src[x]);
+        dst[x + 1] = convert_pixel(src[x + 1]);
+        dst[x + 2] = convert_pixel(src[x + 2]);
+        dst[x + 3] = convert_pixel(src[x + 3]);
+      }
     }
+    capture_stop();
+    /* Validate THIS frame's active interval before publishing. A runtime
+     * overscan change must never publish a cropped or partial old profile. */
+    if (!complete || !wait_vblank(true, 20000U) ||
+        input_active_height(g_active_us) != height) {
+      capture_lost();
+      reacquiring = true;
+      continue;
+    }
+    line_ring_publish(height);
+    ++g_frame_count;
+    if ((g_frame_count % 60U) == 0) gpio_xor_mask(1ul << PICO_DEFAULT_LED_PIN);
   }
 }
 
 uint32_t video_capture_get_frame_count(void) { return g_frame_count; }
+uint32_t video_capture_get_profile(void) { return g_profile; }

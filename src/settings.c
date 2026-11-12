@@ -8,7 +8,7 @@
 
 #define SETTINGS_FLASH_OFFSET (PICO_FLASH_SIZE_BYTES - FLASH_SECTOR_SIZE)
 #define SETTINGS_MAGIC 0x53504753u // "SPGS"
-#define SETTINGS_VERSION 1u
+#define SETTINGS_VERSION 2u
 
 typedef struct {
     uint32_t magic;
@@ -36,7 +36,7 @@ static uint32_t settings_crc32(const void *data, size_t len)
 static void settings_defaults(superpico_settings_t *out)
 {
     memset(out, 0, sizeof(*out));
-    out->resolution = 0; // 480p
+    out->resolution = 3; // Auto: measured PPU timing selects 480p60 / 576p50
 }
 
 bool settings_load(superpico_settings_t *out)
@@ -46,6 +46,7 @@ bool settings_load(superpico_settings_t *out)
         rec->payload_size == (uint16_t)sizeof(superpico_settings_t) &&
         rec->crc == settings_crc32(&rec->payload, sizeof(superpico_settings_t))) {
         *out = rec->payload;
+        if (out->resolution > 4) settings_defaults(out);
         return true;
     }
     settings_defaults(out);

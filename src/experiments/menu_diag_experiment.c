@@ -101,6 +101,8 @@ static void root_menu_enter(uint32_t now_ms);
 static const char *resolution_label(video_pipeline_reboot_mode_t mode)
 {
     switch (mode) {
+        case VIDEO_PIPELINE_REBOOT_MODE_AUTO: return "Auto 50/60 Hz";
+        case VIDEO_PIPELINE_REBOOT_MODE_576P: return "576p50";
         case VIDEO_PIPELINE_REBOOT_MODE_240P:
             return "240p";
         case VIDEO_PIPELINE_REBOOT_MODE_720P:
@@ -113,6 +115,8 @@ static const char *resolution_label(video_pipeline_reboot_mode_t mode)
 static const char *resolution_description(video_pipeline_reboot_mode_t mode)
 {
     switch (mode) {
+        case VIDEO_PIPELINE_REBOOT_MODE_AUTO: return "Follow PPU timing";
+        case VIDEO_PIPELINE_REBOOT_MODE_576P: return "PAL 2x integer";
         case VIDEO_PIPELINE_REBOOT_MODE_240P:
             return "Direct Mode";
         case VIDEO_PIPELINE_REBOOT_MODE_720P:
@@ -125,33 +129,27 @@ static const char *resolution_description(video_pipeline_reboot_mode_t mode)
 static video_pipeline_reboot_mode_t resolution_next(video_pipeline_reboot_mode_t mode)
 {
     switch (mode) {
-        case VIDEO_PIPELINE_REBOOT_MODE_240P:
-            return VIDEO_PIPELINE_REBOOT_MODE_480P;
+        case VIDEO_PIPELINE_REBOOT_MODE_AUTO: return VIDEO_PIPELINE_REBOOT_MODE_480P;
+        case VIDEO_PIPELINE_REBOOT_MODE_480P: return VIDEO_PIPELINE_REBOOT_MODE_576P;
+        case VIDEO_PIPELINE_REBOOT_MODE_576P: return VIDEO_PIPELINE_REBOOT_MODE_240P;
 #if ENABLE_REBOOT_MODE_SWITCH_720P
-        case VIDEO_PIPELINE_REBOOT_MODE_480P:
-            return VIDEO_PIPELINE_REBOOT_MODE_720P;
+        case VIDEO_PIPELINE_REBOOT_MODE_240P: return VIDEO_PIPELINE_REBOOT_MODE_720P;
 #endif
-        default:
-            return VIDEO_PIPELINE_REBOOT_MODE_240P;
+        default: return VIDEO_PIPELINE_REBOOT_MODE_AUTO;
     }
 }
 
 static bool resolution_option_row(video_pipeline_reboot_mode_t mode, uint8_t *row)
 {
     switch (mode) {
-        case VIDEO_PIPELINE_REBOOT_MODE_240P:
-            *row = 7;
-            return true;
-        case VIDEO_PIPELINE_REBOOT_MODE_480P:
-            *row = 9;
-            return true;
+        case VIDEO_PIPELINE_REBOOT_MODE_AUTO: *row = 3; return true;
+        case VIDEO_PIPELINE_REBOOT_MODE_480P: *row = 5; return true;
+        case VIDEO_PIPELINE_REBOOT_MODE_576P: *row = 7; return true;
+        case VIDEO_PIPELINE_REBOOT_MODE_240P: *row = 9; return true;
 #if ENABLE_REBOOT_MODE_SWITCH_720P
-        case VIDEO_PIPELINE_REBOOT_MODE_720P:
-            *row = 11;
-            return true;
+        case VIDEO_PIPELINE_REBOOT_MODE_720P: *row = 11; return true;
 #endif
-        default:
-            return false;
+        default: return false;
     }
 }
 
@@ -198,9 +196,10 @@ static void resolution_draw(void)
 {
     fast_osd_clear();
     fast_osd_puts_color(1, 2, "SuperPico Output", OSD_COLOR_YELLOW);
-    fast_osd_puts_color(5, 2, "Resolution", OSD_COLOR_FG);
-    resolution_render_option(7, VIDEO_PIPELINE_REBOOT_MODE_240P);
-    resolution_render_option(9, VIDEO_PIPELINE_REBOOT_MODE_480P);
+    resolution_render_option(3, VIDEO_PIPELINE_REBOOT_MODE_AUTO);
+    resolution_render_option(5, VIDEO_PIPELINE_REBOOT_MODE_480P);
+    resolution_render_option(7, VIDEO_PIPELINE_REBOOT_MODE_576P);
+    resolution_render_option(9, VIDEO_PIPELINE_REBOOT_MODE_240P);
 #if ENABLE_REBOOT_MODE_SWITCH_720P
     resolution_render_option(11, VIDEO_PIPELINE_REBOOT_MODE_720P);
 #endif
@@ -224,16 +223,10 @@ static void resolution_apply(void)
 
     osd_hide();
     s_screen = MENU_SCREEN_HIDDEN;
-#if ENABLE_SETTINGS_FLASH
-    superpico_settings_t persisted;
-    settings_load(&persisted);
-    persisted.resolution = (uint8_t)s_selected_mode;
-    settings_save(&persisted);
-#endif
 #if ENABLE_OSD_RES_CONFIRM
     video_pipeline_request_reboot_mode_pending(s_selected_mode, video_pipeline_reboot_requested_mode());
 #else
-    video_pipeline_request_reboot_mode(s_selected_mode);
+    video_pipeline_request_reboot_mode_confirmed(s_selected_mode);
 #endif
 }
 
@@ -265,19 +258,12 @@ static void res_confirm_enter(uint32_t now_ms)
 
 static void res_confirm_keep(void)
 {
-    s_res_confirm_armed = false;
-    osd_hide();
-    s_screen = MENU_SCREEN_HIDDEN;
+    /* Commit only after Keep, at reboot before the second core starts. */
+    video_pipeline_request_reboot_mode_confirmed(s_res_confirm_new);
 }
 
 static void res_confirm_revert(void)
 {
-#if ENABLE_SETTINGS_FLASH
-    superpico_settings_t persisted;
-    settings_load(&persisted);
-    persisted.resolution = (uint8_t)s_res_confirm_prev;
-    settings_save(&persisted);
-#endif
     video_pipeline_request_reboot_mode(s_res_confirm_prev);
 }
 
@@ -331,6 +317,7 @@ static void status_draw_static(void)
     fast_osd_puts_color(10, 2, "OVF", OSD_COLOR_GRAY);
     fast_osd_puts_color(11, 2, "REARM", OSD_COLOR_GRAY);
 #endif
+    fast_osd_puts_color(12, 2, "PPU", OSD_COLOR_GRAY);
     fast_osd_puts_color(14, 2, "MENU back", OSD_COLOR_GRAY);
 }
 
@@ -343,6 +330,12 @@ static void put_u32(uint8_t row, uint8_t col, uint32_t value, uint16_t color)
 
 static void status_update_values(void)
 {
+    uint32_t profile = video_capture_get_profile();
+    char input_label[20];
+    if (profile) snprintf(input_label, sizeof(input_label), "%s %u lines   ",
+                          input_region(profile) == INPUT_50HZ ? "50Hz" : "60Hz", input_height(profile));
+    else snprintf(input_label, sizeof(input_label), "Acquiring      ");
+    fast_osd_puts_color(12, 6, input_label, profile ? OSD_COLOR_GREEN : OSD_COLOR_YELLOW);
     put_u32(4, 8, video_capture_get_frame_count(), OSD_COLOR_GREEN);
     put_u32(5, 8, video_frame_count, OSD_COLOR_GREEN);
     put_u32(6, 8, hstx_di_queue_get_level(), OSD_COLOR_GREEN);
