@@ -1,0 +1,23 @@
+ERC report (2026-11-12T22:55:32+0100, Encoding UTF8)
+
+***** Sheet /
+
+***** Sheet /01 | RGB und PPU-Timing: 5 V auf 3,3 V/
+
+***** Sheet /02 | Audio und PPU-Schreibbus: 5 V auf 3,3 V/
+
+***** Sheet /03 | Registeradressierung und Schreibstrobes/
+
+***** Sheet /04 | Registerspeicher: INIDISP / BGMODE / M7SEL / SETINI/
+
+***** Sheet /05 | Betriebsart, Blanking und sicherer 5-V-Rueckkanal/
+
+***** Sheet /06 | RP2350B-Schnittstelle und Erweiterung/
+
+***** Sheet /07 | Eingangs-Bias und Ausgangsterminierung/
+
+***** Sheet /08 | 5-V-seitige Eingangsbeschaltung/
+
+***** Sheet /09 | Optionaler TST15-Rueckkanal - standardmaessig offen/
+
+ ** ERC messages: 0  Errors 0  Warnings 0

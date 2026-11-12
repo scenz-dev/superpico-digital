@@ -364,3 +364,9 @@
 - Added docs/OPEN_POINTS.md with hardware-dependent brightness/D7, Mode7/TOUMEI, audio, frequency-counter, interlace/hires and PCB requirements. Verified INIDISP experimental documentation and SNES_TST RTL; universal pixel masking is not justified.
 - Audio changes: claim SM before allocation, cap DMA polling to 32 stereo pairs, omit 16 KiB buffer clear on restart, reset measured-rate diagnostic. ARM build and existing host suites passed; PIO/DMA bench validation remains outstanding.
 - Updated misleading README board/audio status and added an implementation-status warning to the speculative pin reference. Continuing on authorized feat/pal-auto-detection branch.
+
+## 2026-11-12 — New level-shifted hardware schematic
+- User has no QSB and requests a new KiCad circuit with level shifting and components for missing modes. Created hardware/interface_v2: ten-sheet KiCad 9 logical adapter for an external RP2350B host, six LVC245 buffers, four register latches, address/mode logic, supervisor and default-open TST15 return path.
+- GPIO0 remains reserved; brightness bit0 uses GP45. Preserved core GPIO mapping. Documented WeAct GP23/25 conflicts, reset/early-write issue and gated-clock setup/hold/glitch risk.
+- KiCad ERC: zero violations. Exported netlist passed 732 pin checks, 89 footprint pad-set checks, 512 decoder vectors and 37 unique GPIO checks; PDF inspected. No PCB, hardware validation or new mode firmware. Active OVER correction intentionally unresolved pending PPU-specific evidence.
+- Board revision and exact host module are still required for physical PPU pin mapping and PCB design. Existing hardware/snes_fpc and lib/ unchanged. Continuing publication on the authorized feat/pal-auto-detection branch.

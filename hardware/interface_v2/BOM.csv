@@ -1,0 +1,90 @@
+reference,value,footprint,datasheet,sheet
+U1,SN74LVC245APWR,Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm,https://www.ti.com/lit/ds/symlink/sn74lvc245a.pdf,video
+J1,SNES harness 1,Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical,,video
+C1,100n X7R 16V,Capacitor_SMD:C_0603_1608Metric,,video
+U2,SN74LVC245APWR,Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm,https://www.ti.com/lit/ds/symlink/sn74lvc245a.pdf,video
+J2,SNES harness 2,Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical,,video
+C2,100n X7R 16V,Capacitor_SMD:C_0603_1608Metric,,video
+U3,SN74LVC245APWR,Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm,https://www.ti.com/lit/ds/symlink/sn74lvc245a.pdf,video
+J3,SNES harness 3,Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical,,video
+C3,100n X7R 16V,Capacitor_SMD:C_0603_1608Metric,,video
+U4,SN74LVC245APWR,Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm,https://www.ti.com/lit/ds/symlink/sn74lvc245a.pdf,bus
+J4,SNES harness 4,Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical,,bus
+C4,100n X7R 16V,Capacitor_SMD:C_0603_1608Metric,,bus
+U5,SN74LVC245APWR,Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm,https://www.ti.com/lit/ds/symlink/sn74lvc245a.pdf,bus
+J5,SNES harness 5,Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical,,bus
+C5,100n X7R 16V,Capacitor_SMD:C_0603_1608Metric,,bus
+U6,SN74LVC245APWR,Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm,https://www.ti.com/lit/ds/symlink/sn74lvc245a.pdf,bus
+J6,SNES harness 6,Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical,,bus
+C6,100n X7R 16V,Capacitor_SMD:C_0603_1608Metric,,bus
+U7,SN74LVC138APWR,Package_SO:TSSOP-16_4.4x5mm_P0.65mm,https://www.ti.com/lit/ds/symlink/sn74lvc138a.pdf,decode
+U8,SN74LVC138APWR,Package_SO:TSSOP-16_4.4x5mm_P0.65mm,https://www.ti.com/lit/ds/symlink/sn74lvc138a.pdf,decode
+U9,SN74LVC138APWR,Package_SO:TSSOP-16_4.4x5mm_P0.65mm,https://www.ti.com/lit/ds/symlink/sn74lvc138a.pdf,decode
+U10,SN74LVC138APWR,Package_SO:TSSOP-16_4.4x5mm_P0.65mm,https://www.ti.com/lit/ds/symlink/sn74lvc138a.pdf,decode
+U11,SN74LVC32APWR,Package_SO:TSSOP-14_4.4x5mm_P0.65mm,https://www.ti.com/lit/ds/symlink/sn74lvc32a.pdf,decode
+C7,100n X7R 16V,Capacitor_SMD:C_0603_1608Metric,,decode
+C8,100n X7R 16V,Capacitor_SMD:C_0603_1608Metric,,decode
+C9,100n X7R 16V,Capacitor_SMD:C_0603_1608Metric,,decode
+C10,100n X7R 16V,Capacitor_SMD:C_0603_1608Metric,,decode
+C11,100n X7R 16V,Capacitor_SMD:C_0603_1608Metric,,decode
+U12,"74LVC273PW,118",Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm,https://assets.nexperia.com/documents/data-sheet/74LVC273.pdf,latches
+C12,100n X7R 16V,Capacitor_SMD:C_0603_1608Metric,,latches
+U13,"74LVC273PW,118",Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm,https://assets.nexperia.com/documents/data-sheet/74LVC273.pdf,latches
+C13,100n X7R 16V,Capacitor_SMD:C_0603_1608Metric,,latches
+U14,"74LVC273PW,118",Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm,https://assets.nexperia.com/documents/data-sheet/74LVC273.pdf,latches
+C14,100n X7R 16V,Capacitor_SMD:C_0603_1608Metric,,latches
+U15,"74LVC273PW,118",Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm,https://assets.nexperia.com/documents/data-sheet/74LVC273.pdf,latches
+C15,100n X7R 16V,Capacitor_SMD:C_0603_1608Metric,,latches
+U16,SN74LVC04APWR,Package_SO:TSSOP-14_4.4x5mm_P0.65mm,https://www.ti.com/lit/ds/symlink/sn74lvc04a.pdf,logic
+U17,SN74LVC08APWR,Package_SO:TSSOP-14_4.4x5mm_P0.65mm,https://www.ti.com/lit/ds/symlink/sn74lvc08a.pdf,logic
+U18,SN74LVC86APWR,Package_SO:TSSOP-14_4.4x5mm_P0.65mm,https://www.ti.com/lit/ds/symlink/sn74lvc86a.pdf,logic
+U19,SN74LVC08APWR,Package_SO:TSSOP-14_4.4x5mm_P0.65mm,https://www.ti.com/lit/ds/symlink/sn74lvc08a.pdf,logic
+U20,SN74LVC32APWR,Package_SO:TSSOP-14_4.4x5mm_P0.65mm,https://www.ti.com/lit/ds/symlink/sn74lvc32a.pdf,logic
+C16,100n X7R 16V,Capacitor_SMD:C_0603_1608Metric,,logic
+C17,100n X7R 16V,Capacitor_SMD:C_0603_1608Metric,,logic
+C18,100n X7R 16V,Capacitor_SMD:C_0603_1608Metric,,logic
+C19,100n X7R 16V,Capacitor_SMD:C_0603_1608Metric,,logic
+C20,100n X7R 16V,Capacitor_SMD:C_0603_1608Metric,,logic
+J7,HOST_VIDEO,Connector_PinHeader_2.54mm:PinHeader_2x10_P2.54mm_Vertical,,host
+J8,HOST_AUDIO,Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical,,host
+J9,HOST_EXT,Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical,,host
+J10,3V3 LOGIC ANALYZER,Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical,,host
+RN1,CAY16-330J4LF / 4x33R,Resistor_SMD:R_Array_Convex_4x0603,https://www.bourns.com/docs/product-datasheets/CATCAY.pdf,pulls
+RN2,CAY16-330J4LF / 4x33R,Resistor_SMD:R_Array_Convex_4x0603,https://www.bourns.com/docs/product-datasheets/CATCAY.pdf,pulls
+RN3,CAY16-330J4LF / 4x33R,Resistor_SMD:R_Array_Convex_4x0603,https://www.bourns.com/docs/product-datasheets/CATCAY.pdf,pulls
+RN4,CAY16-330J4LF / 4x33R,Resistor_SMD:R_Array_Convex_4x0603,https://www.bourns.com/docs/product-datasheets/CATCAY.pdf,pulls
+RN5,CAY16-330J4LF / 4x33R,Resistor_SMD:R_Array_Convex_4x0603,https://www.bourns.com/docs/product-datasheets/CATCAY.pdf,pulls
+RN6,CAY16-330J4LF / 4x33R,Resistor_SMD:R_Array_Convex_4x0603,https://www.bourns.com/docs/product-datasheets/CATCAY.pdf,pulls
+RN7,CAY16-330J4LF / 4x33R,Resistor_SMD:R_Array_Convex_4x0603,https://www.bourns.com/docs/product-datasheets/CATCAY.pdf,pulls
+RN8,CAY16-330J4LF / 4x33R,Resistor_SMD:R_Array_Convex_4x0603,https://www.bourns.com/docs/product-datasheets/CATCAY.pdf,pulls
+RN9,CAY16-330J4LF / 4x33R,Resistor_SMD:R_Array_Convex_4x0603,https://www.bourns.com/docs/product-datasheets/CATCAY.pdf,pulls
+RN10,CAY16-330J4LF / 4x33R,Resistor_SMD:R_Array_Convex_4x0603,https://www.bourns.com/docs/product-datasheets/CATCAY.pdf,pulls
+RN20,CAY16-104J4LF / 4x100k,Resistor_SMD:R_Array_Convex_4x0603,https://www.bourns.com/docs/product-datasheets/CATCAY.pdf,bias
+RN21,CAY16-104J4LF / 4x100k,Resistor_SMD:R_Array_Convex_4x0603,https://www.bourns.com/docs/product-datasheets/CATCAY.pdf,bias
+RN22,CAY16-104J4LF / 4x100k,Resistor_SMD:R_Array_Convex_4x0603,https://www.bourns.com/docs/product-datasheets/CATCAY.pdf,bias
+RN23,CAY16-104J4LF / 4x100k,Resistor_SMD:R_Array_Convex_4x0603,https://www.bourns.com/docs/product-datasheets/CATCAY.pdf,bias
+RN24,CAY16-104J4LF / 4x100k,Resistor_SMD:R_Array_Convex_4x0603,https://www.bourns.com/docs/product-datasheets/CATCAY.pdf,bias
+RN25,CAY16-104J4LF / 4x100k,Resistor_SMD:R_Array_Convex_4x0603,https://www.bourns.com/docs/product-datasheets/CATCAY.pdf,bias
+RN26,CAY16-104J4LF / 4x100k,Resistor_SMD:R_Array_Convex_4x0603,https://www.bourns.com/docs/product-datasheets/CATCAY.pdf,bias
+RN27,CAY16-104J4LF / 4x100k,Resistor_SMD:R_Array_Convex_4x0603,https://www.bourns.com/docs/product-datasheets/CATCAY.pdf,bias
+RN28,CAY16-104J4LF / 4x100k,Resistor_SMD:R_Array_Convex_4x0603,https://www.bourns.com/docs/product-datasheets/CATCAY.pdf,bias
+RN29,CAY16-104J4LF / 4x100k,Resistor_SMD:R_Array_Convex_4x0603,https://www.bourns.com/docs/product-datasheets/CATCAY.pdf,bias
+RN30,CAY16-104J4LF / 4x100k,Resistor_SMD:R_Array_Convex_4x0603,https://www.bourns.com/docs/product-datasheets/CATCAY.pdf,bias
+RN31,CAY16-104J4LF / 4x100k,Resistor_SMD:R_Array_Convex_4x0603,https://www.bourns.com/docs/product-datasheets/CATCAY.pdf,bias
+J11,POWER - one 3V3 source,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical,,root
+U21,TPS3808G33DBVR,Package_TO_SOT_SMD:SOT-23-6,https://www.ti.com/lit/ds/symlink/tps3808.pdf,root
+R1,10k,Resistor_SMD:R_0603_1608Metric,,root
+C21,100p C0G 50V,Capacitor_SMD:C_0603_1608Metric,,root
+C22,10u X7R 10V,Capacitor_SMD:C_0603_1608Metric,,root
+C26,1u X7R 16V,Capacitor_SMD:C_0603_1608Metric,,root
+C23,100n X7R 16V,Capacitor_SMD:C_0603_1608Metric,,root
+U22,SN74AHCT125PWR,Package_SO:TSSOP-14_4.4x5mm_P0.65mm,https://www.ti.com/lit/ds/symlink/sn74ahct125.pdf,return
+U23,SN74LVC1G06DBVR,Package_TO_SOT_SMD:SOT-23-5,https://www.ti.com/lit/ds/symlink/sn74lvc1g06.pdf,return
+R2,10k,Resistor_SMD:R_0603_1608Metric,,return
+R3,1k,Resistor_SMD:R_0603_1608Metric,,return
+JP1,OPEN - enable only after validation,Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm,,return
+R4,100k,Resistor_SMD:R_0603_1608Metric,,return
+R5,100k,Resistor_SMD:R_0603_1608Metric,,return
+J12,TST15 CONTROL,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,,return
+C24,100n X7R 16V,Capacitor_SMD:C_0603_1608Metric,,return
+C25,100n X7R 16V,Capacitor_SMD:C_0603_1608Metric,,return

@@ -1,0 +1,38 @@
+GPIO,source_3V3,status
+1,IN1,new firmware required
+2,IN2,new firmware required
+3,IN3,new firmware required
+4,FORCE_BLANK,new firmware required
+5,MODE7_CTX,new firmware required
+6,LV_DCK,existing core
+7,LV_RESET_N,existing core
+8,LV_OVER,new firmware required
+9,LV_TOUMEI,new firmware required
+10,SI2,new firmware required
+11,SI0,new firmware required
+20,HIRES,new firmware required
+21,SI6,new firmware required
+22,LV_SDATA,existing core
+23,LV_LRCK,existing core
+24,LV_BCLK,existing core
+27,LV_VBLANK,existing core
+28,LV_PCLK,existing core
+29,LV_B4,existing core
+30,LV_B3,existing core
+31,LV_B2,existing core
+32,LV_B1,existing core
+33,LV_B0,existing core
+34,LV_G4,existing core
+35,LV_G3,existing core
+36,LV_G2,existing core
+37,LV_G1,existing core
+38,LV_G0,existing core
+39,LV_R4,existing core
+40,LV_R3,existing core
+41,LV_R2,existing core
+42,LV_R1,existing core
+43,LV_R0,existing core
+44,LV_HBLANK,existing core
+45,IN0,new firmware required
+46,LV_FIELD,new firmware required
+47,LV_MCLK,new firmware required

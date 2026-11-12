@@ -1,0 +1,5858 @@
+[
+  {
+    "ref": "U1",
+    "pin": "2",
+    "pin_name": "A1",
+    "net": "SN_B4",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U1",
+    "pin": "3",
+    "pin_name": "A2",
+    "net": "SN_B3",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U1",
+    "pin": "4",
+    "pin_name": "A3",
+    "net": "SN_B2",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U1",
+    "pin": "5",
+    "pin_name": "A4",
+    "net": "SN_B1",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U1",
+    "pin": "6",
+    "pin_name": "A5",
+    "net": "SN_B0",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U1",
+    "pin": "7",
+    "pin_name": "A6",
+    "net": "SN_G4",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U1",
+    "pin": "8",
+    "pin_name": "A7",
+    "net": "SN_G3",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U1",
+    "pin": "9",
+    "pin_name": "A8",
+    "net": "SN_G2",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U1",
+    "pin": "1",
+    "pin_name": "DIR",
+    "net": "V3V3",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U1",
+    "pin": "19",
+    "pin_name": "~{OE}",
+    "net": "GND",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U1",
+    "pin": "20",
+    "pin_name": "VCC",
+    "net": "V3V3",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U1",
+    "pin": "10",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U1",
+    "pin": "18",
+    "pin_name": "B1",
+    "net": "LV_B4",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U1",
+    "pin": "17",
+    "pin_name": "B2",
+    "net": "LV_B3",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U1",
+    "pin": "16",
+    "pin_name": "B3",
+    "net": "LV_B2",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U1",
+    "pin": "15",
+    "pin_name": "B4",
+    "net": "LV_B1",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U1",
+    "pin": "14",
+    "pin_name": "B5",
+    "net": "LV_B0",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U1",
+    "pin": "13",
+    "pin_name": "B6",
+    "net": "LV_G4",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U1",
+    "pin": "12",
+    "pin_name": "B7",
+    "net": "LV_G3",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U1",
+    "pin": "11",
+    "pin_name": "B8",
+    "net": "LV_G2",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "J1",
+    "pin": "1",
+    "pin_name": "B4",
+    "net": "SN_B4",
+    "kind": "J_IN_1",
+    "sheet": "video"
+  },
+  {
+    "ref": "J1",
+    "pin": "2",
+    "pin_name": "B3",
+    "net": "SN_B3",
+    "kind": "J_IN_1",
+    "sheet": "video"
+  },
+  {
+    "ref": "J1",
+    "pin": "3",
+    "pin_name": "B2",
+    "net": "SN_B2",
+    "kind": "J_IN_1",
+    "sheet": "video"
+  },
+  {
+    "ref": "J1",
+    "pin": "4",
+    "pin_name": "B1",
+    "net": "SN_B1",
+    "kind": "J_IN_1",
+    "sheet": "video"
+  },
+  {
+    "ref": "J1",
+    "pin": "5",
+    "pin_name": "B0",
+    "net": "SN_B0",
+    "kind": "J_IN_1",
+    "sheet": "video"
+  },
+  {
+    "ref": "J1",
+    "pin": "6",
+    "pin_name": "G4",
+    "net": "SN_G4",
+    "kind": "J_IN_1",
+    "sheet": "video"
+  },
+  {
+    "ref": "J1",
+    "pin": "7",
+    "pin_name": "G3",
+    "net": "SN_G3",
+    "kind": "J_IN_1",
+    "sheet": "video"
+  },
+  {
+    "ref": "J1",
+    "pin": "8",
+    "pin_name": "G2",
+    "net": "SN_G2",
+    "kind": "J_IN_1",
+    "sheet": "video"
+  },
+  {
+    "ref": "J1",
+    "pin": "9",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "J_IN_1",
+    "sheet": "video"
+  },
+  {
+    "ref": "J1",
+    "pin": "10",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "J_IN_1",
+    "sheet": "video"
+  },
+  {
+    "ref": "C1",
+    "pin": "1",
+    "pin_name": "1",
+    "net": "V3V3",
+    "kind": "C",
+    "sheet": "video"
+  },
+  {
+    "ref": "C1",
+    "pin": "2",
+    "pin_name": "2",
+    "net": "GND",
+    "kind": "C",
+    "sheet": "video"
+  },
+  {
+    "ref": "U2",
+    "pin": "2",
+    "pin_name": "A1",
+    "net": "SN_G1",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U2",
+    "pin": "3",
+    "pin_name": "A2",
+    "net": "SN_G0",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U2",
+    "pin": "4",
+    "pin_name": "A3",
+    "net": "SN_R4",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U2",
+    "pin": "5",
+    "pin_name": "A4",
+    "net": "SN_R3",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U2",
+    "pin": "6",
+    "pin_name": "A5",
+    "net": "SN_R2",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U2",
+    "pin": "7",
+    "pin_name": "A6",
+    "net": "SN_R1",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U2",
+    "pin": "8",
+    "pin_name": "A7",
+    "net": "SN_R0",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U2",
+    "pin": "9",
+    "pin_name": "A8",
+    "net": "SN_PCLK",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U2",
+    "pin": "1",
+    "pin_name": "DIR",
+    "net": "V3V3",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U2",
+    "pin": "19",
+    "pin_name": "~{OE}",
+    "net": "GND",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U2",
+    "pin": "20",
+    "pin_name": "VCC",
+    "net": "V3V3",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U2",
+    "pin": "10",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U2",
+    "pin": "18",
+    "pin_name": "B1",
+    "net": "LV_G1",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U2",
+    "pin": "17",
+    "pin_name": "B2",
+    "net": "LV_G0",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U2",
+    "pin": "16",
+    "pin_name": "B3",
+    "net": "LV_R4",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U2",
+    "pin": "15",
+    "pin_name": "B4",
+    "net": "LV_R3",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U2",
+    "pin": "14",
+    "pin_name": "B5",
+    "net": "LV_R2",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U2",
+    "pin": "13",
+    "pin_name": "B6",
+    "net": "LV_R1",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U2",
+    "pin": "12",
+    "pin_name": "B7",
+    "net": "LV_R0",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U2",
+    "pin": "11",
+    "pin_name": "B8",
+    "net": "LV_PCLK",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "J2",
+    "pin": "1",
+    "pin_name": "G1",
+    "net": "SN_G1",
+    "kind": "J_IN_2",
+    "sheet": "video"
+  },
+  {
+    "ref": "J2",
+    "pin": "2",
+    "pin_name": "G0",
+    "net": "SN_G0",
+    "kind": "J_IN_2",
+    "sheet": "video"
+  },
+  {
+    "ref": "J2",
+    "pin": "3",
+    "pin_name": "R4",
+    "net": "SN_R4",
+    "kind": "J_IN_2",
+    "sheet": "video"
+  },
+  {
+    "ref": "J2",
+    "pin": "4",
+    "pin_name": "R3",
+    "net": "SN_R3",
+    "kind": "J_IN_2",
+    "sheet": "video"
+  },
+  {
+    "ref": "J2",
+    "pin": "5",
+    "pin_name": "R2",
+    "net": "SN_R2",
+    "kind": "J_IN_2",
+    "sheet": "video"
+  },
+  {
+    "ref": "J2",
+    "pin": "6",
+    "pin_name": "R1",
+    "net": "SN_R1",
+    "kind": "J_IN_2",
+    "sheet": "video"
+  },
+  {
+    "ref": "J2",
+    "pin": "7",
+    "pin_name": "R0",
+    "net": "SN_R0",
+    "kind": "J_IN_2",
+    "sheet": "video"
+  },
+  {
+    "ref": "J2",
+    "pin": "8",
+    "pin_name": "PCLK",
+    "net": "SN_PCLK",
+    "kind": "J_IN_2",
+    "sheet": "video"
+  },
+  {
+    "ref": "J2",
+    "pin": "9",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "J_IN_2",
+    "sheet": "video"
+  },
+  {
+    "ref": "J2",
+    "pin": "10",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "J_IN_2",
+    "sheet": "video"
+  },
+  {
+    "ref": "C2",
+    "pin": "1",
+    "pin_name": "1",
+    "net": "V3V3",
+    "kind": "C",
+    "sheet": "video"
+  },
+  {
+    "ref": "C2",
+    "pin": "2",
+    "pin_name": "2",
+    "net": "GND",
+    "kind": "C",
+    "sheet": "video"
+  },
+  {
+    "ref": "U3",
+    "pin": "2",
+    "pin_name": "A1",
+    "net": "SN_VBLANK",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U3",
+    "pin": "3",
+    "pin_name": "A2",
+    "net": "SN_HBLANK",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U3",
+    "pin": "4",
+    "pin_name": "A3",
+    "net": "SN_FIELD",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U3",
+    "pin": "5",
+    "pin_name": "A4",
+    "net": "SN_OVER",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U3",
+    "pin": "6",
+    "pin_name": "A5",
+    "net": "SN_TOUMEI",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U3",
+    "pin": "7",
+    "pin_name": "A6",
+    "net": "SN_RESET_N",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U3",
+    "pin": "8",
+    "pin_name": "A7",
+    "net": "SN_DCK",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U3",
+    "pin": "9",
+    "pin_name": "A8",
+    "net": "SN_CSYNC",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U3",
+    "pin": "1",
+    "pin_name": "DIR",
+    "net": "V3V3",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U3",
+    "pin": "19",
+    "pin_name": "~{OE}",
+    "net": "GND",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U3",
+    "pin": "20",
+    "pin_name": "VCC",
+    "net": "V3V3",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U3",
+    "pin": "10",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U3",
+    "pin": "18",
+    "pin_name": "B1",
+    "net": "LV_VBLANK",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U3",
+    "pin": "17",
+    "pin_name": "B2",
+    "net": "LV_HBLANK",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U3",
+    "pin": "16",
+    "pin_name": "B3",
+    "net": "LV_FIELD",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U3",
+    "pin": "15",
+    "pin_name": "B4",
+    "net": "LV_OVER",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U3",
+    "pin": "14",
+    "pin_name": "B5",
+    "net": "LV_TOUMEI",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U3",
+    "pin": "13",
+    "pin_name": "B6",
+    "net": "LV_RESET_N",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U3",
+    "pin": "12",
+    "pin_name": "B7",
+    "net": "LV_DCK",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "U3",
+    "pin": "11",
+    "pin_name": "B8",
+    "net": "LV_CSYNC",
+    "kind": "LVC245",
+    "sheet": "video"
+  },
+  {
+    "ref": "J3",
+    "pin": "1",
+    "pin_name": "VBLANK",
+    "net": "SN_VBLANK",
+    "kind": "J_IN_3",
+    "sheet": "video"
+  },
+  {
+    "ref": "J3",
+    "pin": "2",
+    "pin_name": "HBLANK",
+    "net": "SN_HBLANK",
+    "kind": "J_IN_3",
+    "sheet": "video"
+  },
+  {
+    "ref": "J3",
+    "pin": "3",
+    "pin_name": "FIELD",
+    "net": "SN_FIELD",
+    "kind": "J_IN_3",
+    "sheet": "video"
+  },
+  {
+    "ref": "J3",
+    "pin": "4",
+    "pin_name": "OVER",
+    "net": "SN_OVER",
+    "kind": "J_IN_3",
+    "sheet": "video"
+  },
+  {
+    "ref": "J3",
+    "pin": "5",
+    "pin_name": "TOUMEI",
+    "net": "SN_TOUMEI",
+    "kind": "J_IN_3",
+    "sheet": "video"
+  },
+  {
+    "ref": "J3",
+    "pin": "6",
+    "pin_name": "RESET_N",
+    "net": "SN_RESET_N",
+    "kind": "J_IN_3",
+    "sheet": "video"
+  },
+  {
+    "ref": "J3",
+    "pin": "7",
+    "pin_name": "DCK",
+    "net": "SN_DCK",
+    "kind": "J_IN_3",
+    "sheet": "video"
+  },
+  {
+    "ref": "J3",
+    "pin": "8",
+    "pin_name": "CSYNC",
+    "net": "SN_CSYNC",
+    "kind": "J_IN_3",
+    "sheet": "video"
+  },
+  {
+    "ref": "J3",
+    "pin": "9",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "J_IN_3",
+    "sheet": "video"
+  },
+  {
+    "ref": "J3",
+    "pin": "10",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "J_IN_3",
+    "sheet": "video"
+  },
+  {
+    "ref": "C3",
+    "pin": "1",
+    "pin_name": "1",
+    "net": "V3V3",
+    "kind": "C",
+    "sheet": "video"
+  },
+  {
+    "ref": "C3",
+    "pin": "2",
+    "pin_name": "2",
+    "net": "GND",
+    "kind": "C",
+    "sheet": "video"
+  },
+  {
+    "ref": "U4",
+    "pin": "2",
+    "pin_name": "A1",
+    "net": "SN_SDATA",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U4",
+    "pin": "3",
+    "pin_name": "A2",
+    "net": "SN_LRCK",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U4",
+    "pin": "4",
+    "pin_name": "A3",
+    "net": "SN_BCLK",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U4",
+    "pin": "5",
+    "pin_name": "A4",
+    "net": "SN_PAWR_N",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U4",
+    "pin": "6",
+    "pin_name": "A5",
+    "net": "SN_PARD_N",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U4",
+    "pin": "7",
+    "pin_name": "A6",
+    "net": "SN_MCLK",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U4",
+    "pin": "8",
+    "pin_name": "A7",
+    "net": "GND",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U4",
+    "pin": "9",
+    "pin_name": "A8",
+    "net": "GND",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U4",
+    "pin": "1",
+    "pin_name": "DIR",
+    "net": "V3V3",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U4",
+    "pin": "19",
+    "pin_name": "~{OE}",
+    "net": "GND",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U4",
+    "pin": "20",
+    "pin_name": "VCC",
+    "net": "V3V3",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U4",
+    "pin": "10",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U4",
+    "pin": "18",
+    "pin_name": "B1",
+    "net": "LV_SDATA",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U4",
+    "pin": "17",
+    "pin_name": "B2",
+    "net": "LV_LRCK",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U4",
+    "pin": "16",
+    "pin_name": "B3",
+    "net": "LV_BCLK",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U4",
+    "pin": "15",
+    "pin_name": "B4",
+    "net": "LV_PAWR_N",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U4",
+    "pin": "14",
+    "pin_name": "B5",
+    "net": "LV_PARD_N",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U4",
+    "pin": "13",
+    "pin_name": "B6",
+    "net": "LV_MCLK",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U4",
+    "pin": "12",
+    "pin_name": "B7",
+    "net": null,
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U4",
+    "pin": "11",
+    "pin_name": "B8",
+    "net": null,
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "J4",
+    "pin": "1",
+    "pin_name": "SDATA",
+    "net": "SN_SDATA",
+    "kind": "J_IN_4",
+    "sheet": "bus"
+  },
+  {
+    "ref": "J4",
+    "pin": "2",
+    "pin_name": "LRCK",
+    "net": "SN_LRCK",
+    "kind": "J_IN_4",
+    "sheet": "bus"
+  },
+  {
+    "ref": "J4",
+    "pin": "3",
+    "pin_name": "BCLK",
+    "net": "SN_BCLK",
+    "kind": "J_IN_4",
+    "sheet": "bus"
+  },
+  {
+    "ref": "J4",
+    "pin": "4",
+    "pin_name": "PAWR_N",
+    "net": "SN_PAWR_N",
+    "kind": "J_IN_4",
+    "sheet": "bus"
+  },
+  {
+    "ref": "J4",
+    "pin": "5",
+    "pin_name": "PARD_N",
+    "net": "SN_PARD_N",
+    "kind": "J_IN_4",
+    "sheet": "bus"
+  },
+  {
+    "ref": "J4",
+    "pin": "6",
+    "pin_name": "MCLK",
+    "net": "SN_MCLK",
+    "kind": "J_IN_4",
+    "sheet": "bus"
+  },
+  {
+    "ref": "J4",
+    "pin": "7",
+    "pin_name": "NC",
+    "net": null,
+    "kind": "J_IN_4",
+    "sheet": "bus"
+  },
+  {
+    "ref": "J4",
+    "pin": "8",
+    "pin_name": "NC",
+    "net": null,
+    "kind": "J_IN_4",
+    "sheet": "bus"
+  },
+  {
+    "ref": "J4",
+    "pin": "9",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "J_IN_4",
+    "sheet": "bus"
+  },
+  {
+    "ref": "J4",
+    "pin": "10",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "J_IN_4",
+    "sheet": "bus"
+  },
+  {
+    "ref": "C4",
+    "pin": "1",
+    "pin_name": "1",
+    "net": "V3V3",
+    "kind": "C",
+    "sheet": "bus"
+  },
+  {
+    "ref": "C4",
+    "pin": "2",
+    "pin_name": "2",
+    "net": "GND",
+    "kind": "C",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U5",
+    "pin": "2",
+    "pin_name": "A1",
+    "net": "SN_PA0",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U5",
+    "pin": "3",
+    "pin_name": "A2",
+    "net": "SN_PA1",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U5",
+    "pin": "4",
+    "pin_name": "A3",
+    "net": "SN_PA2",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U5",
+    "pin": "5",
+    "pin_name": "A4",
+    "net": "SN_PA3",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U5",
+    "pin": "6",
+    "pin_name": "A5",
+    "net": "SN_PA4",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U5",
+    "pin": "7",
+    "pin_name": "A6",
+    "net": "SN_PA5",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U5",
+    "pin": "8",
+    "pin_name": "A7",
+    "net": "SN_PA6",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U5",
+    "pin": "9",
+    "pin_name": "A8",
+    "net": "SN_PA7",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U5",
+    "pin": "1",
+    "pin_name": "DIR",
+    "net": "V3V3",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U5",
+    "pin": "19",
+    "pin_name": "~{OE}",
+    "net": "GND",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U5",
+    "pin": "20",
+    "pin_name": "VCC",
+    "net": "V3V3",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U5",
+    "pin": "10",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U5",
+    "pin": "18",
+    "pin_name": "B1",
+    "net": "LV_PA0",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U5",
+    "pin": "17",
+    "pin_name": "B2",
+    "net": "LV_PA1",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U5",
+    "pin": "16",
+    "pin_name": "B3",
+    "net": "LV_PA2",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U5",
+    "pin": "15",
+    "pin_name": "B4",
+    "net": "LV_PA3",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U5",
+    "pin": "14",
+    "pin_name": "B5",
+    "net": "LV_PA4",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U5",
+    "pin": "13",
+    "pin_name": "B6",
+    "net": "LV_PA5",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U5",
+    "pin": "12",
+    "pin_name": "B7",
+    "net": "LV_PA6",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U5",
+    "pin": "11",
+    "pin_name": "B8",
+    "net": "LV_PA7",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "J5",
+    "pin": "1",
+    "pin_name": "PA0",
+    "net": "SN_PA0",
+    "kind": "J_IN_5",
+    "sheet": "bus"
+  },
+  {
+    "ref": "J5",
+    "pin": "2",
+    "pin_name": "PA1",
+    "net": "SN_PA1",
+    "kind": "J_IN_5",
+    "sheet": "bus"
+  },
+  {
+    "ref": "J5",
+    "pin": "3",
+    "pin_name": "PA2",
+    "net": "SN_PA2",
+    "kind": "J_IN_5",
+    "sheet": "bus"
+  },
+  {
+    "ref": "J5",
+    "pin": "4",
+    "pin_name": "PA3",
+    "net": "SN_PA3",
+    "kind": "J_IN_5",
+    "sheet": "bus"
+  },
+  {
+    "ref": "J5",
+    "pin": "5",
+    "pin_name": "PA4",
+    "net": "SN_PA4",
+    "kind": "J_IN_5",
+    "sheet": "bus"
+  },
+  {
+    "ref": "J5",
+    "pin": "6",
+    "pin_name": "PA5",
+    "net": "SN_PA5",
+    "kind": "J_IN_5",
+    "sheet": "bus"
+  },
+  {
+    "ref": "J5",
+    "pin": "7",
+    "pin_name": "PA6",
+    "net": "SN_PA6",
+    "kind": "J_IN_5",
+    "sheet": "bus"
+  },
+  {
+    "ref": "J5",
+    "pin": "8",
+    "pin_name": "PA7",
+    "net": "SN_PA7",
+    "kind": "J_IN_5",
+    "sheet": "bus"
+  },
+  {
+    "ref": "J5",
+    "pin": "9",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "J_IN_5",
+    "sheet": "bus"
+  },
+  {
+    "ref": "J5",
+    "pin": "10",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "J_IN_5",
+    "sheet": "bus"
+  },
+  {
+    "ref": "C5",
+    "pin": "1",
+    "pin_name": "1",
+    "net": "V3V3",
+    "kind": "C",
+    "sheet": "bus"
+  },
+  {
+    "ref": "C5",
+    "pin": "2",
+    "pin_name": "2",
+    "net": "GND",
+    "kind": "C",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U6",
+    "pin": "2",
+    "pin_name": "A1",
+    "net": "SN_D0",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U6",
+    "pin": "3",
+    "pin_name": "A2",
+    "net": "SN_D1",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U6",
+    "pin": "4",
+    "pin_name": "A3",
+    "net": "SN_D2",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U6",
+    "pin": "5",
+    "pin_name": "A4",
+    "net": "SN_D3",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U6",
+    "pin": "6",
+    "pin_name": "A5",
+    "net": "SN_D4",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U6",
+    "pin": "7",
+    "pin_name": "A6",
+    "net": "SN_D5",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U6",
+    "pin": "8",
+    "pin_name": "A7",
+    "net": "SN_D6",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U6",
+    "pin": "9",
+    "pin_name": "A8",
+    "net": "SN_D7",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U6",
+    "pin": "1",
+    "pin_name": "DIR",
+    "net": "V3V3",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U6",
+    "pin": "19",
+    "pin_name": "~{OE}",
+    "net": "GND",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U6",
+    "pin": "20",
+    "pin_name": "VCC",
+    "net": "V3V3",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U6",
+    "pin": "10",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U6",
+    "pin": "18",
+    "pin_name": "B1",
+    "net": "LV_D0",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U6",
+    "pin": "17",
+    "pin_name": "B2",
+    "net": "LV_D1",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U6",
+    "pin": "16",
+    "pin_name": "B3",
+    "net": "LV_D2",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U6",
+    "pin": "15",
+    "pin_name": "B4",
+    "net": "LV_D3",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U6",
+    "pin": "14",
+    "pin_name": "B5",
+    "net": "LV_D4",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U6",
+    "pin": "13",
+    "pin_name": "B6",
+    "net": "LV_D5",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U6",
+    "pin": "12",
+    "pin_name": "B7",
+    "net": "LV_D6",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U6",
+    "pin": "11",
+    "pin_name": "B8",
+    "net": "LV_D7",
+    "kind": "LVC245",
+    "sheet": "bus"
+  },
+  {
+    "ref": "J6",
+    "pin": "1",
+    "pin_name": "D0",
+    "net": "SN_D0",
+    "kind": "J_IN_6",
+    "sheet": "bus"
+  },
+  {
+    "ref": "J6",
+    "pin": "2",
+    "pin_name": "D1",
+    "net": "SN_D1",
+    "kind": "J_IN_6",
+    "sheet": "bus"
+  },
+  {
+    "ref": "J6",
+    "pin": "3",
+    "pin_name": "D2",
+    "net": "SN_D2",
+    "kind": "J_IN_6",
+    "sheet": "bus"
+  },
+  {
+    "ref": "J6",
+    "pin": "4",
+    "pin_name": "D3",
+    "net": "SN_D3",
+    "kind": "J_IN_6",
+    "sheet": "bus"
+  },
+  {
+    "ref": "J6",
+    "pin": "5",
+    "pin_name": "D4",
+    "net": "SN_D4",
+    "kind": "J_IN_6",
+    "sheet": "bus"
+  },
+  {
+    "ref": "J6",
+    "pin": "6",
+    "pin_name": "D5",
+    "net": "SN_D5",
+    "kind": "J_IN_6",
+    "sheet": "bus"
+  },
+  {
+    "ref": "J6",
+    "pin": "7",
+    "pin_name": "D6",
+    "net": "SN_D6",
+    "kind": "J_IN_6",
+    "sheet": "bus"
+  },
+  {
+    "ref": "J6",
+    "pin": "8",
+    "pin_name": "D7",
+    "net": "SN_D7",
+    "kind": "J_IN_6",
+    "sheet": "bus"
+  },
+  {
+    "ref": "J6",
+    "pin": "9",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "J_IN_6",
+    "sheet": "bus"
+  },
+  {
+    "ref": "J6",
+    "pin": "10",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "J_IN_6",
+    "sheet": "bus"
+  },
+  {
+    "ref": "C6",
+    "pin": "1",
+    "pin_name": "1",
+    "net": "V3V3",
+    "kind": "C",
+    "sheet": "bus"
+  },
+  {
+    "ref": "C6",
+    "pin": "2",
+    "pin_name": "2",
+    "net": "GND",
+    "kind": "C",
+    "sheet": "bus"
+  },
+  {
+    "ref": "U7",
+    "pin": "1",
+    "pin_name": "A",
+    "net": "LV_PA3",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U7",
+    "pin": "2",
+    "pin_name": "B",
+    "net": "LV_PA4",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U7",
+    "pin": "3",
+    "pin_name": "C",
+    "net": "LV_PA5",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U7",
+    "pin": "4",
+    "pin_name": "~{G2A}",
+    "net": "LV_PA6",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U7",
+    "pin": "5",
+    "pin_name": "~{G2B}",
+    "net": "LV_PA7",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U7",
+    "pin": "6",
+    "pin_name": "G1",
+    "net": "V3V3",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U7",
+    "pin": "16",
+    "pin_name": "VCC",
+    "net": "V3V3",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U7",
+    "pin": "8",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U7",
+    "pin": "15",
+    "pin_name": "~{Y0}",
+    "net": "BANK00_N",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U7",
+    "pin": "14",
+    "pin_name": "~{Y1}",
+    "net": null,
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U7",
+    "pin": "13",
+    "pin_name": "~{Y2}",
+    "net": null,
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U7",
+    "pin": "12",
+    "pin_name": "~{Y3}",
+    "net": "BANK18_N",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U7",
+    "pin": "11",
+    "pin_name": "~{Y4}",
+    "net": null,
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U7",
+    "pin": "10",
+    "pin_name": "~{Y5}",
+    "net": null,
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U7",
+    "pin": "9",
+    "pin_name": "~{Y6}",
+    "net": "BANK30_N",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U7",
+    "pin": "7",
+    "pin_name": "~{Y7}",
+    "net": null,
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U8",
+    "pin": "1",
+    "pin_name": "A",
+    "net": "LV_PA0",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U8",
+    "pin": "2",
+    "pin_name": "B",
+    "net": "LV_PA1",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U8",
+    "pin": "3",
+    "pin_name": "C",
+    "net": "LV_PA2",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U8",
+    "pin": "4",
+    "pin_name": "~{G2A}",
+    "net": "BANK00_N",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U8",
+    "pin": "5",
+    "pin_name": "~{G2B}",
+    "net": "GND",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U8",
+    "pin": "6",
+    "pin_name": "G1",
+    "net": "V3V3",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U8",
+    "pin": "16",
+    "pin_name": "VCC",
+    "net": "V3V3",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U8",
+    "pin": "8",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U8",
+    "pin": "15",
+    "pin_name": "~{Y0}",
+    "net": "SEL00_N",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U8",
+    "pin": "14",
+    "pin_name": "~{Y1}",
+    "net": null,
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U8",
+    "pin": "13",
+    "pin_name": "~{Y2}",
+    "net": null,
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U8",
+    "pin": "12",
+    "pin_name": "~{Y3}",
+    "net": null,
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U8",
+    "pin": "11",
+    "pin_name": "~{Y4}",
+    "net": null,
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U8",
+    "pin": "10",
+    "pin_name": "~{Y5}",
+    "net": "SEL05_N",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U8",
+    "pin": "9",
+    "pin_name": "~{Y6}",
+    "net": null,
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U8",
+    "pin": "7",
+    "pin_name": "~{Y7}",
+    "net": null,
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U9",
+    "pin": "1",
+    "pin_name": "A",
+    "net": "LV_PA0",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U9",
+    "pin": "2",
+    "pin_name": "B",
+    "net": "LV_PA1",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U9",
+    "pin": "3",
+    "pin_name": "C",
+    "net": "LV_PA2",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U9",
+    "pin": "4",
+    "pin_name": "~{G2A}",
+    "net": "BANK18_N",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U9",
+    "pin": "5",
+    "pin_name": "~{G2B}",
+    "net": "GND",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U9",
+    "pin": "6",
+    "pin_name": "G1",
+    "net": "V3V3",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U9",
+    "pin": "16",
+    "pin_name": "VCC",
+    "net": "V3V3",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U9",
+    "pin": "8",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U9",
+    "pin": "15",
+    "pin_name": "~{Y0}",
+    "net": null,
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U9",
+    "pin": "14",
+    "pin_name": "~{Y1}",
+    "net": null,
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U9",
+    "pin": "13",
+    "pin_name": "~{Y2}",
+    "net": "SEL1A_N",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U9",
+    "pin": "12",
+    "pin_name": "~{Y3}",
+    "net": null,
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U9",
+    "pin": "11",
+    "pin_name": "~{Y4}",
+    "net": null,
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U9",
+    "pin": "10",
+    "pin_name": "~{Y5}",
+    "net": null,
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U9",
+    "pin": "9",
+    "pin_name": "~{Y6}",
+    "net": null,
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U9",
+    "pin": "7",
+    "pin_name": "~{Y7}",
+    "net": null,
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U10",
+    "pin": "1",
+    "pin_name": "A",
+    "net": "LV_PA0",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U10",
+    "pin": "2",
+    "pin_name": "B",
+    "net": "LV_PA1",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U10",
+    "pin": "3",
+    "pin_name": "C",
+    "net": "LV_PA2",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U10",
+    "pin": "4",
+    "pin_name": "~{G2A}",
+    "net": "BANK30_N",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U10",
+    "pin": "5",
+    "pin_name": "~{G2B}",
+    "net": "GND",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U10",
+    "pin": "6",
+    "pin_name": "G1",
+    "net": "V3V3",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U10",
+    "pin": "16",
+    "pin_name": "VCC",
+    "net": "V3V3",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U10",
+    "pin": "8",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U10",
+    "pin": "15",
+    "pin_name": "~{Y0}",
+    "net": null,
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U10",
+    "pin": "14",
+    "pin_name": "~{Y1}",
+    "net": null,
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U10",
+    "pin": "13",
+    "pin_name": "~{Y2}",
+    "net": null,
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U10",
+    "pin": "12",
+    "pin_name": "~{Y3}",
+    "net": "SEL33_N",
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U10",
+    "pin": "11",
+    "pin_name": "~{Y4}",
+    "net": null,
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U10",
+    "pin": "10",
+    "pin_name": "~{Y5}",
+    "net": null,
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U10",
+    "pin": "9",
+    "pin_name": "~{Y6}",
+    "net": null,
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U10",
+    "pin": "7",
+    "pin_name": "~{Y7}",
+    "net": null,
+    "kind": "LVC138",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U11",
+    "pin": "1",
+    "pin_name": "1A",
+    "net": "SEL00_N",
+    "kind": "OR",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U11",
+    "pin": "2",
+    "pin_name": "1B",
+    "net": "LV_PAWR_N",
+    "kind": "OR",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U11",
+    "pin": "4",
+    "pin_name": "2A",
+    "net": "SEL05_N",
+    "kind": "OR",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U11",
+    "pin": "5",
+    "pin_name": "2B",
+    "net": "LV_PAWR_N",
+    "kind": "OR",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U11",
+    "pin": "9",
+    "pin_name": "3A",
+    "net": "SEL1A_N",
+    "kind": "OR",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U11",
+    "pin": "10",
+    "pin_name": "3B",
+    "net": "LV_PAWR_N",
+    "kind": "OR",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U11",
+    "pin": "12",
+    "pin_name": "4A",
+    "net": "SEL33_N",
+    "kind": "OR",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U11",
+    "pin": "13",
+    "pin_name": "4B",
+    "net": "LV_PAWR_N",
+    "kind": "OR",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U11",
+    "pin": "14",
+    "pin_name": "VCC",
+    "net": "V3V3",
+    "kind": "OR",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U11",
+    "pin": "7",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "OR",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U11",
+    "pin": "3",
+    "pin_name": "1Y",
+    "net": "CLK00",
+    "kind": "OR",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U11",
+    "pin": "6",
+    "pin_name": "2Y",
+    "net": "CLK05",
+    "kind": "OR",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U11",
+    "pin": "8",
+    "pin_name": "3Y",
+    "net": "CLK1A",
+    "kind": "OR",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U11",
+    "pin": "11",
+    "pin_name": "4Y",
+    "net": "CLK33",
+    "kind": "OR",
+    "sheet": "decode"
+  },
+  {
+    "ref": "C7",
+    "pin": "1",
+    "pin_name": "1",
+    "net": "V3V3",
+    "kind": "C",
+    "sheet": "decode"
+  },
+  {
+    "ref": "C7",
+    "pin": "2",
+    "pin_name": "2",
+    "net": "GND",
+    "kind": "C",
+    "sheet": "decode"
+  },
+  {
+    "ref": "C8",
+    "pin": "1",
+    "pin_name": "1",
+    "net": "V3V3",
+    "kind": "C",
+    "sheet": "decode"
+  },
+  {
+    "ref": "C8",
+    "pin": "2",
+    "pin_name": "2",
+    "net": "GND",
+    "kind": "C",
+    "sheet": "decode"
+  },
+  {
+    "ref": "C9",
+    "pin": "1",
+    "pin_name": "1",
+    "net": "V3V3",
+    "kind": "C",
+    "sheet": "decode"
+  },
+  {
+    "ref": "C9",
+    "pin": "2",
+    "pin_name": "2",
+    "net": "GND",
+    "kind": "C",
+    "sheet": "decode"
+  },
+  {
+    "ref": "C10",
+    "pin": "1",
+    "pin_name": "1",
+    "net": "V3V3",
+    "kind": "C",
+    "sheet": "decode"
+  },
+  {
+    "ref": "C10",
+    "pin": "2",
+    "pin_name": "2",
+    "net": "GND",
+    "kind": "C",
+    "sheet": "decode"
+  },
+  {
+    "ref": "C11",
+    "pin": "1",
+    "pin_name": "1",
+    "net": "V3V3",
+    "kind": "C",
+    "sheet": "decode"
+  },
+  {
+    "ref": "C11",
+    "pin": "2",
+    "pin_name": "2",
+    "net": "GND",
+    "kind": "C",
+    "sheet": "decode"
+  },
+  {
+    "ref": "U12",
+    "pin": "3",
+    "pin_name": "D0",
+    "net": "LV_D0",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U12",
+    "pin": "4",
+    "pin_name": "D1",
+    "net": "LV_D1",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U12",
+    "pin": "7",
+    "pin_name": "D2",
+    "net": "LV_D2",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U12",
+    "pin": "8",
+    "pin_name": "D3",
+    "net": "LV_D3",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U12",
+    "pin": "13",
+    "pin_name": "D4",
+    "net": "V3V3",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U12",
+    "pin": "14",
+    "pin_name": "D5",
+    "net": "GND",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U12",
+    "pin": "17",
+    "pin_name": "D6",
+    "net": "GND",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U12",
+    "pin": "18",
+    "pin_name": "D7",
+    "net": "LV_D7",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U12",
+    "pin": "11",
+    "pin_name": "CP",
+    "net": "CLK00",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U12",
+    "pin": "1",
+    "pin_name": "~{MR}",
+    "net": "REG_RESET_N",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U12",
+    "pin": "20",
+    "pin_name": "VCC",
+    "net": "V3V3",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U12",
+    "pin": "10",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U12",
+    "pin": "2",
+    "pin_name": "Q0",
+    "net": "IN0",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U12",
+    "pin": "5",
+    "pin_name": "Q1",
+    "net": "IN1",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U12",
+    "pin": "6",
+    "pin_name": "Q2",
+    "net": "IN2",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U12",
+    "pin": "9",
+    "pin_name": "Q3",
+    "net": "IN3",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U12",
+    "pin": "12",
+    "pin_name": "Q4",
+    "net": "IN4",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U12",
+    "pin": "15",
+    "pin_name": "Q5",
+    "net": null,
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U12",
+    "pin": "16",
+    "pin_name": "Q6",
+    "net": null,
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U12",
+    "pin": "19",
+    "pin_name": "Q7",
+    "net": "IN7",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "C12",
+    "pin": "1",
+    "pin_name": "1",
+    "net": "V3V3",
+    "kind": "C",
+    "sheet": "latches"
+  },
+  {
+    "ref": "C12",
+    "pin": "2",
+    "pin_name": "2",
+    "net": "GND",
+    "kind": "C",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U13",
+    "pin": "3",
+    "pin_name": "D0",
+    "net": "LV_D0",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U13",
+    "pin": "4",
+    "pin_name": "D1",
+    "net": "LV_D1",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U13",
+    "pin": "7",
+    "pin_name": "D2",
+    "net": "LV_D2",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U13",
+    "pin": "8",
+    "pin_name": "D3",
+    "net": "LV_D3",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U13",
+    "pin": "13",
+    "pin_name": "D4",
+    "net": "LV_D4",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U13",
+    "pin": "14",
+    "pin_name": "D5",
+    "net": "LV_D5",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U13",
+    "pin": "17",
+    "pin_name": "D6",
+    "net": "LV_D6",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U13",
+    "pin": "18",
+    "pin_name": "D7",
+    "net": "LV_D7",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U13",
+    "pin": "11",
+    "pin_name": "CP",
+    "net": "CLK05",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U13",
+    "pin": "1",
+    "pin_name": "~{MR}",
+    "net": "REG_RESET_N",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U13",
+    "pin": "20",
+    "pin_name": "VCC",
+    "net": "V3V3",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U13",
+    "pin": "10",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U13",
+    "pin": "2",
+    "pin_name": "Q0",
+    "net": "BG0",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U13",
+    "pin": "5",
+    "pin_name": "Q1",
+    "net": "BG1",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U13",
+    "pin": "6",
+    "pin_name": "Q2",
+    "net": "BG2",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U13",
+    "pin": "9",
+    "pin_name": "Q3",
+    "net": null,
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U13",
+    "pin": "12",
+    "pin_name": "Q4",
+    "net": null,
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U13",
+    "pin": "15",
+    "pin_name": "Q5",
+    "net": null,
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U13",
+    "pin": "16",
+    "pin_name": "Q6",
+    "net": null,
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U13",
+    "pin": "19",
+    "pin_name": "Q7",
+    "net": null,
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "C13",
+    "pin": "1",
+    "pin_name": "1",
+    "net": "V3V3",
+    "kind": "C",
+    "sheet": "latches"
+  },
+  {
+    "ref": "C13",
+    "pin": "2",
+    "pin_name": "2",
+    "net": "GND",
+    "kind": "C",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U14",
+    "pin": "3",
+    "pin_name": "D0",
+    "net": "LV_D0",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U14",
+    "pin": "4",
+    "pin_name": "D1",
+    "net": "LV_D1",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U14",
+    "pin": "7",
+    "pin_name": "D2",
+    "net": "LV_D2",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U14",
+    "pin": "8",
+    "pin_name": "D3",
+    "net": "LV_D3",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U14",
+    "pin": "13",
+    "pin_name": "D4",
+    "net": "LV_D4",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U14",
+    "pin": "14",
+    "pin_name": "D5",
+    "net": "LV_D5",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U14",
+    "pin": "17",
+    "pin_name": "D6",
+    "net": "LV_D6",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U14",
+    "pin": "18",
+    "pin_name": "D7",
+    "net": "LV_D7",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U14",
+    "pin": "11",
+    "pin_name": "CP",
+    "net": "CLK1A",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U14",
+    "pin": "1",
+    "pin_name": "~{MR}",
+    "net": "REG_RESET_N",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U14",
+    "pin": "20",
+    "pin_name": "VCC",
+    "net": "V3V3",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U14",
+    "pin": "10",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U14",
+    "pin": "2",
+    "pin_name": "Q0",
+    "net": null,
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U14",
+    "pin": "5",
+    "pin_name": "Q1",
+    "net": null,
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U14",
+    "pin": "6",
+    "pin_name": "Q2",
+    "net": null,
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U14",
+    "pin": "9",
+    "pin_name": "Q3",
+    "net": null,
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U14",
+    "pin": "12",
+    "pin_name": "Q4",
+    "net": null,
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U14",
+    "pin": "15",
+    "pin_name": "Q5",
+    "net": null,
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U14",
+    "pin": "16",
+    "pin_name": "Q6",
+    "net": "M76",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U14",
+    "pin": "19",
+    "pin_name": "Q7",
+    "net": "M77",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "C14",
+    "pin": "1",
+    "pin_name": "1",
+    "net": "V3V3",
+    "kind": "C",
+    "sheet": "latches"
+  },
+  {
+    "ref": "C14",
+    "pin": "2",
+    "pin_name": "2",
+    "net": "GND",
+    "kind": "C",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U15",
+    "pin": "3",
+    "pin_name": "D0",
+    "net": "LV_D0",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U15",
+    "pin": "4",
+    "pin_name": "D1",
+    "net": "LV_D1",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U15",
+    "pin": "7",
+    "pin_name": "D2",
+    "net": "LV_D2",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U15",
+    "pin": "8",
+    "pin_name": "D3",
+    "net": "LV_D3",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U15",
+    "pin": "13",
+    "pin_name": "D4",
+    "net": "LV_D4",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U15",
+    "pin": "14",
+    "pin_name": "D5",
+    "net": "LV_D5",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U15",
+    "pin": "17",
+    "pin_name": "D6",
+    "net": "LV_D6",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U15",
+    "pin": "18",
+    "pin_name": "D7",
+    "net": "LV_D7",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U15",
+    "pin": "11",
+    "pin_name": "CP",
+    "net": "CLK33",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U15",
+    "pin": "1",
+    "pin_name": "~{MR}",
+    "net": "REG_RESET_N",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U15",
+    "pin": "20",
+    "pin_name": "VCC",
+    "net": "V3V3",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U15",
+    "pin": "10",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U15",
+    "pin": "2",
+    "pin_name": "Q0",
+    "net": "SI0",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U15",
+    "pin": "5",
+    "pin_name": "Q1",
+    "net": "SI1",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U15",
+    "pin": "6",
+    "pin_name": "Q2",
+    "net": "SI2",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U15",
+    "pin": "9",
+    "pin_name": "Q3",
+    "net": "SI3",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U15",
+    "pin": "12",
+    "pin_name": "Q4",
+    "net": null,
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U15",
+    "pin": "15",
+    "pin_name": "Q5",
+    "net": null,
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U15",
+    "pin": "16",
+    "pin_name": "Q6",
+    "net": "SI6",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U15",
+    "pin": "19",
+    "pin_name": "Q7",
+    "net": "SI7",
+    "kind": "LVC273",
+    "sheet": "latches"
+  },
+  {
+    "ref": "C15",
+    "pin": "1",
+    "pin_name": "1",
+    "net": "V3V3",
+    "kind": "C",
+    "sheet": "latches"
+  },
+  {
+    "ref": "C15",
+    "pin": "2",
+    "pin_name": "2",
+    "net": "GND",
+    "kind": "C",
+    "sheet": "latches"
+  },
+  {
+    "ref": "U16",
+    "pin": "1",
+    "pin_name": "1A",
+    "net": "IN4",
+    "kind": "INV",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U16",
+    "pin": "3",
+    "pin_name": "2A",
+    "net": "M76",
+    "kind": "INV",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U16",
+    "pin": "5",
+    "pin_name": "3A",
+    "net": "LV_VBLANK",
+    "kind": "INV",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U16",
+    "pin": "9",
+    "pin_name": "4A",
+    "net": "GND",
+    "kind": "INV",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U16",
+    "pin": "11",
+    "pin_name": "5A",
+    "net": "GND",
+    "kind": "INV",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U16",
+    "pin": "13",
+    "pin_name": "6A",
+    "net": "GND",
+    "kind": "INV",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U16",
+    "pin": "14",
+    "pin_name": "VCC",
+    "net": "V3V3",
+    "kind": "INV",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U16",
+    "pin": "7",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "INV",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U16",
+    "pin": "2",
+    "pin_name": "1Y",
+    "net": "NOT_VALID",
+    "kind": "INV",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U16",
+    "pin": "4",
+    "pin_name": "2Y",
+    "net": "NOT_M76",
+    "kind": "INV",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U16",
+    "pin": "6",
+    "pin_name": "3Y",
+    "net": "TST_ACTIVE",
+    "kind": "INV",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U16",
+    "pin": "8",
+    "pin_name": "4Y",
+    "net": null,
+    "kind": "INV",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U16",
+    "pin": "10",
+    "pin_name": "5Y",
+    "net": null,
+    "kind": "INV",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U16",
+    "pin": "12",
+    "pin_name": "6Y",
+    "net": null,
+    "kind": "INV",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U17",
+    "pin": "1",
+    "pin_name": "1A",
+    "net": "BG0",
+    "kind": "AND",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U17",
+    "pin": "2",
+    "pin_name": "1B",
+    "net": "BG1",
+    "kind": "AND",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U17",
+    "pin": "4",
+    "pin_name": "2A",
+    "net": "MODE01",
+    "kind": "AND",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U17",
+    "pin": "5",
+    "pin_name": "2B",
+    "net": "BG2",
+    "kind": "AND",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U17",
+    "pin": "9",
+    "pin_name": "3A",
+    "net": "M77",
+    "kind": "AND",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U17",
+    "pin": "10",
+    "pin_name": "3B",
+    "net": "NOT_M76",
+    "kind": "AND",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U17",
+    "pin": "12",
+    "pin_name": "4A",
+    "net": "MODE7",
+    "kind": "AND",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U17",
+    "pin": "13",
+    "pin_name": "4B",
+    "net": "M7_OVERMODE",
+    "kind": "AND",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U17",
+    "pin": "14",
+    "pin_name": "VCC",
+    "net": "V3V3",
+    "kind": "AND",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U17",
+    "pin": "7",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "AND",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U17",
+    "pin": "3",
+    "pin_name": "1Y",
+    "net": "MODE01",
+    "kind": "AND",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U17",
+    "pin": "6",
+    "pin_name": "2Y",
+    "net": "MODE7",
+    "kind": "AND",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U17",
+    "pin": "8",
+    "pin_name": "3Y",
+    "net": "M7_OVERMODE",
+    "kind": "AND",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U17",
+    "pin": "11",
+    "pin_name": "4Y",
+    "net": "MODE7_CTX",
+    "kind": "AND",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U18",
+    "pin": "1",
+    "pin_name": "1A",
+    "net": "BG0",
+    "kind": "XOR",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U18",
+    "pin": "2",
+    "pin_name": "1B",
+    "net": "BG1",
+    "kind": "XOR",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U18",
+    "pin": "4",
+    "pin_name": "2A",
+    "net": "GND",
+    "kind": "XOR",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U18",
+    "pin": "5",
+    "pin_name": "2B",
+    "net": "GND",
+    "kind": "XOR",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U18",
+    "pin": "9",
+    "pin_name": "3A",
+    "net": "GND",
+    "kind": "XOR",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U18",
+    "pin": "10",
+    "pin_name": "3B",
+    "net": "GND",
+    "kind": "XOR",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U18",
+    "pin": "12",
+    "pin_name": "4A",
+    "net": "GND",
+    "kind": "XOR",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U18",
+    "pin": "13",
+    "pin_name": "4B",
+    "net": "GND",
+    "kind": "XOR",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U18",
+    "pin": "14",
+    "pin_name": "VCC",
+    "net": "V3V3",
+    "kind": "XOR",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U18",
+    "pin": "7",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "XOR",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U18",
+    "pin": "3",
+    "pin_name": "1Y",
+    "net": "MODE_XOR",
+    "kind": "XOR",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U18",
+    "pin": "6",
+    "pin_name": "2Y",
+    "net": null,
+    "kind": "XOR",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U18",
+    "pin": "8",
+    "pin_name": "3Y",
+    "net": null,
+    "kind": "XOR",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U18",
+    "pin": "11",
+    "pin_name": "4Y",
+    "net": null,
+    "kind": "XOR",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U19",
+    "pin": "1",
+    "pin_name": "1A",
+    "net": "BG2",
+    "kind": "AND",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U19",
+    "pin": "2",
+    "pin_name": "1B",
+    "net": "MODE_XOR",
+    "kind": "AND",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U19",
+    "pin": "4",
+    "pin_name": "2A",
+    "net": "PGOOD",
+    "kind": "AND",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U19",
+    "pin": "5",
+    "pin_name": "2B",
+    "net": "LV_RESET_N",
+    "kind": "AND",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U19",
+    "pin": "9",
+    "pin_name": "3A",
+    "net": "PGOOD",
+    "kind": "AND",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U19",
+    "pin": "10",
+    "pin_name": "3B",
+    "net": "LV_RESET_N",
+    "kind": "AND",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U19",
+    "pin": "12",
+    "pin_name": "4A",
+    "net": "GND",
+    "kind": "AND",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U19",
+    "pin": "13",
+    "pin_name": "4B",
+    "net": "GND",
+    "kind": "AND",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U19",
+    "pin": "14",
+    "pin_name": "VCC",
+    "net": "V3V3",
+    "kind": "AND",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U19",
+    "pin": "7",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "AND",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U19",
+    "pin": "3",
+    "pin_name": "1Y",
+    "net": "HIRES_MODE",
+    "kind": "AND",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U19",
+    "pin": "6",
+    "pin_name": "2Y",
+    "net": "REG_RESET_N",
+    "kind": "AND",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U19",
+    "pin": "8",
+    "pin_name": "3Y",
+    "net": "RETURN_ENABLE",
+    "kind": "AND",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U19",
+    "pin": "11",
+    "pin_name": "4Y",
+    "net": null,
+    "kind": "AND",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U20",
+    "pin": "1",
+    "pin_name": "1A",
+    "net": "IN7",
+    "kind": "OR",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U20",
+    "pin": "2",
+    "pin_name": "1B",
+    "net": "NOT_VALID",
+    "kind": "OR",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U20",
+    "pin": "4",
+    "pin_name": "2A",
+    "net": "HIRES_MODE",
+    "kind": "OR",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U20",
+    "pin": "5",
+    "pin_name": "2B",
+    "net": "SI3",
+    "kind": "OR",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U20",
+    "pin": "9",
+    "pin_name": "3A",
+    "net": "GND",
+    "kind": "OR",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U20",
+    "pin": "10",
+    "pin_name": "3B",
+    "net": "GND",
+    "kind": "OR",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U20",
+    "pin": "12",
+    "pin_name": "4A",
+    "net": "GND",
+    "kind": "OR",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U20",
+    "pin": "13",
+    "pin_name": "4B",
+    "net": "GND",
+    "kind": "OR",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U20",
+    "pin": "14",
+    "pin_name": "VCC",
+    "net": "V3V3",
+    "kind": "OR",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U20",
+    "pin": "7",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "OR",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U20",
+    "pin": "3",
+    "pin_name": "1Y",
+    "net": "FORCE_BLANK",
+    "kind": "OR",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U20",
+    "pin": "6",
+    "pin_name": "2Y",
+    "net": "HIRES",
+    "kind": "OR",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U20",
+    "pin": "8",
+    "pin_name": "3Y",
+    "net": null,
+    "kind": "OR",
+    "sheet": "logic"
+  },
+  {
+    "ref": "U20",
+    "pin": "11",
+    "pin_name": "4Y",
+    "net": null,
+    "kind": "OR",
+    "sheet": "logic"
+  },
+  {
+    "ref": "C16",
+    "pin": "1",
+    "pin_name": "1",
+    "net": "V3V3",
+    "kind": "C",
+    "sheet": "logic"
+  },
+  {
+    "ref": "C16",
+    "pin": "2",
+    "pin_name": "2",
+    "net": "GND",
+    "kind": "C",
+    "sheet": "logic"
+  },
+  {
+    "ref": "C17",
+    "pin": "1",
+    "pin_name": "1",
+    "net": "V3V3",
+    "kind": "C",
+    "sheet": "logic"
+  },
+  {
+    "ref": "C17",
+    "pin": "2",
+    "pin_name": "2",
+    "net": "GND",
+    "kind": "C",
+    "sheet": "logic"
+  },
+  {
+    "ref": "C18",
+    "pin": "1",
+    "pin_name": "1",
+    "net": "V3V3",
+    "kind": "C",
+    "sheet": "logic"
+  },
+  {
+    "ref": "C18",
+    "pin": "2",
+    "pin_name": "2",
+    "net": "GND",
+    "kind": "C",
+    "sheet": "logic"
+  },
+  {
+    "ref": "C19",
+    "pin": "1",
+    "pin_name": "1",
+    "net": "V3V3",
+    "kind": "C",
+    "sheet": "logic"
+  },
+  {
+    "ref": "C19",
+    "pin": "2",
+    "pin_name": "2",
+    "net": "GND",
+    "kind": "C",
+    "sheet": "logic"
+  },
+  {
+    "ref": "C20",
+    "pin": "1",
+    "pin_name": "1",
+    "net": "V3V3",
+    "kind": "C",
+    "sheet": "logic"
+  },
+  {
+    "ref": "C20",
+    "pin": "2",
+    "pin_name": "2",
+    "net": "GND",
+    "kind": "C",
+    "sheet": "logic"
+  },
+  {
+    "ref": "J7",
+    "pin": "1",
+    "pin_name": "GP27",
+    "net": "GP27",
+    "kind": "HOST_VIDEO",
+    "sheet": "host"
+  },
+  {
+    "ref": "J7",
+    "pin": "2",
+    "pin_name": "GP28",
+    "net": "GP28",
+    "kind": "HOST_VIDEO",
+    "sheet": "host"
+  },
+  {
+    "ref": "J7",
+    "pin": "3",
+    "pin_name": "GP29",
+    "net": "GP29",
+    "kind": "HOST_VIDEO",
+    "sheet": "host"
+  },
+  {
+    "ref": "J7",
+    "pin": "4",
+    "pin_name": "GP30",
+    "net": "GP30",
+    "kind": "HOST_VIDEO",
+    "sheet": "host"
+  },
+  {
+    "ref": "J7",
+    "pin": "5",
+    "pin_name": "GP31",
+    "net": "GP31",
+    "kind": "HOST_VIDEO",
+    "sheet": "host"
+  },
+  {
+    "ref": "J7",
+    "pin": "6",
+    "pin_name": "GP32",
+    "net": "GP32",
+    "kind": "HOST_VIDEO",
+    "sheet": "host"
+  },
+  {
+    "ref": "J7",
+    "pin": "7",
+    "pin_name": "GP33",
+    "net": "GP33",
+    "kind": "HOST_VIDEO",
+    "sheet": "host"
+  },
+  {
+    "ref": "J7",
+    "pin": "8",
+    "pin_name": "GP34",
+    "net": "GP34",
+    "kind": "HOST_VIDEO",
+    "sheet": "host"
+  },
+  {
+    "ref": "J7",
+    "pin": "9",
+    "pin_name": "GP35",
+    "net": "GP35",
+    "kind": "HOST_VIDEO",
+    "sheet": "host"
+  },
+  {
+    "ref": "J7",
+    "pin": "10",
+    "pin_name": "GP36",
+    "net": "GP36",
+    "kind": "HOST_VIDEO",
+    "sheet": "host"
+  },
+  {
+    "ref": "J7",
+    "pin": "11",
+    "pin_name": "GP37",
+    "net": "GP37",
+    "kind": "HOST_VIDEO",
+    "sheet": "host"
+  },
+  {
+    "ref": "J7",
+    "pin": "12",
+    "pin_name": "GP38",
+    "net": "GP38",
+    "kind": "HOST_VIDEO",
+    "sheet": "host"
+  },
+  {
+    "ref": "J7",
+    "pin": "13",
+    "pin_name": "GP39",
+    "net": "GP39",
+    "kind": "HOST_VIDEO",
+    "sheet": "host"
+  },
+  {
+    "ref": "J7",
+    "pin": "14",
+    "pin_name": "GP40",
+    "net": "GP40",
+    "kind": "HOST_VIDEO",
+    "sheet": "host"
+  },
+  {
+    "ref": "J7",
+    "pin": "15",
+    "pin_name": "GP41",
+    "net": "GP41",
+    "kind": "HOST_VIDEO",
+    "sheet": "host"
+  },
+  {
+    "ref": "J7",
+    "pin": "16",
+    "pin_name": "GP42",
+    "net": "GP42",
+    "kind": "HOST_VIDEO",
+    "sheet": "host"
+  },
+  {
+    "ref": "J7",
+    "pin": "17",
+    "pin_name": "GP43",
+    "net": "GP43",
+    "kind": "HOST_VIDEO",
+    "sheet": "host"
+  },
+  {
+    "ref": "J7",
+    "pin": "18",
+    "pin_name": "GP44",
+    "net": "GP44",
+    "kind": "HOST_VIDEO",
+    "sheet": "host"
+  },
+  {
+    "ref": "J7",
+    "pin": "19",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "HOST_VIDEO",
+    "sheet": "host"
+  },
+  {
+    "ref": "J7",
+    "pin": "20",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "HOST_VIDEO",
+    "sheet": "host"
+  },
+  {
+    "ref": "J8",
+    "pin": "1",
+    "pin_name": "GP6",
+    "net": "GP6",
+    "kind": "HOST_AUDIO",
+    "sheet": "host"
+  },
+  {
+    "ref": "J8",
+    "pin": "2",
+    "pin_name": "GP7",
+    "net": "GP7",
+    "kind": "HOST_AUDIO",
+    "sheet": "host"
+  },
+  {
+    "ref": "J8",
+    "pin": "3",
+    "pin_name": "GP22",
+    "net": "GP22",
+    "kind": "HOST_AUDIO",
+    "sheet": "host"
+  },
+  {
+    "ref": "J8",
+    "pin": "4",
+    "pin_name": "GP23",
+    "net": "GP23",
+    "kind": "HOST_AUDIO",
+    "sheet": "host"
+  },
+  {
+    "ref": "J8",
+    "pin": "5",
+    "pin_name": "GP24",
+    "net": "GP24",
+    "kind": "HOST_AUDIO",
+    "sheet": "host"
+  },
+  {
+    "ref": "J8",
+    "pin": "6",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "HOST_AUDIO",
+    "sheet": "host"
+  },
+  {
+    "ref": "J8",
+    "pin": "7",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "HOST_AUDIO",
+    "sheet": "host"
+  },
+  {
+    "ref": "J9",
+    "pin": "1",
+    "pin_name": "GP45",
+    "net": "GP45",
+    "kind": "HOST_EXT",
+    "sheet": "host"
+  },
+  {
+    "ref": "J9",
+    "pin": "2",
+    "pin_name": "GP1",
+    "net": "GP1",
+    "kind": "HOST_EXT",
+    "sheet": "host"
+  },
+  {
+    "ref": "J9",
+    "pin": "3",
+    "pin_name": "GP2",
+    "net": "GP2",
+    "kind": "HOST_EXT",
+    "sheet": "host"
+  },
+  {
+    "ref": "J9",
+    "pin": "4",
+    "pin_name": "GP3",
+    "net": "GP3",
+    "kind": "HOST_EXT",
+    "sheet": "host"
+  },
+  {
+    "ref": "J9",
+    "pin": "5",
+    "pin_name": "GP4",
+    "net": "GP4",
+    "kind": "HOST_EXT",
+    "sheet": "host"
+  },
+  {
+    "ref": "J9",
+    "pin": "6",
+    "pin_name": "GP5",
+    "net": "GP5",
+    "kind": "HOST_EXT",
+    "sheet": "host"
+  },
+  {
+    "ref": "J9",
+    "pin": "7",
+    "pin_name": "GP8",
+    "net": "GP8",
+    "kind": "HOST_EXT",
+    "sheet": "host"
+  },
+  {
+    "ref": "J9",
+    "pin": "8",
+    "pin_name": "GP9",
+    "net": "GP9",
+    "kind": "HOST_EXT",
+    "sheet": "host"
+  },
+  {
+    "ref": "J9",
+    "pin": "9",
+    "pin_name": "GP10",
+    "net": "GP10",
+    "kind": "HOST_EXT",
+    "sheet": "host"
+  },
+  {
+    "ref": "J9",
+    "pin": "10",
+    "pin_name": "GP11",
+    "net": "GP11",
+    "kind": "HOST_EXT",
+    "sheet": "host"
+  },
+  {
+    "ref": "J9",
+    "pin": "11",
+    "pin_name": "GP20",
+    "net": "GP20",
+    "kind": "HOST_EXT",
+    "sheet": "host"
+  },
+  {
+    "ref": "J9",
+    "pin": "12",
+    "pin_name": "GP21",
+    "net": "GP21",
+    "kind": "HOST_EXT",
+    "sheet": "host"
+  },
+  {
+    "ref": "J9",
+    "pin": "13",
+    "pin_name": "GP46",
+    "net": "GP46",
+    "kind": "HOST_EXT",
+    "sheet": "host"
+  },
+  {
+    "ref": "J9",
+    "pin": "14",
+    "pin_name": "GP47",
+    "net": "GP47",
+    "kind": "HOST_EXT",
+    "sheet": "host"
+  },
+  {
+    "ref": "J9",
+    "pin": "15",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "HOST_EXT",
+    "sheet": "host"
+  },
+  {
+    "ref": "J9",
+    "pin": "16",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "HOST_EXT",
+    "sheet": "host"
+  },
+  {
+    "ref": "J10",
+    "pin": "1",
+    "pin_name": "LV_CSYNC",
+    "net": "LV_CSYNC",
+    "kind": "DIAG",
+    "sheet": "host"
+  },
+  {
+    "ref": "J10",
+    "pin": "2",
+    "pin_name": "LV_PARD_N",
+    "net": "LV_PARD_N",
+    "kind": "DIAG",
+    "sheet": "host"
+  },
+  {
+    "ref": "J10",
+    "pin": "3",
+    "pin_name": "LV_MCLK",
+    "net": "LV_MCLK",
+    "kind": "DIAG",
+    "sheet": "host"
+  },
+  {
+    "ref": "J10",
+    "pin": "4",
+    "pin_name": "SI1",
+    "net": "SI1",
+    "kind": "DIAG",
+    "sheet": "host"
+  },
+  {
+    "ref": "J10",
+    "pin": "5",
+    "pin_name": "SI2",
+    "net": "SI2",
+    "kind": "DIAG",
+    "sheet": "host"
+  },
+  {
+    "ref": "J10",
+    "pin": "6",
+    "pin_name": "SI7",
+    "net": "SI7",
+    "kind": "DIAG",
+    "sheet": "host"
+  },
+  {
+    "ref": "J10",
+    "pin": "7",
+    "pin_name": "MODE7",
+    "net": "MODE7",
+    "kind": "DIAG",
+    "sheet": "host"
+  },
+  {
+    "ref": "J10",
+    "pin": "8",
+    "pin_name": "IN4",
+    "net": "IN4",
+    "kind": "DIAG",
+    "sheet": "host"
+  },
+  {
+    "ref": "J10",
+    "pin": "9",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "DIAG",
+    "sheet": "host"
+  },
+  {
+    "ref": "J10",
+    "pin": "10",
+    "pin_name": "V3V3",
+    "net": "V3V3",
+    "kind": "DIAG",
+    "sheet": "host"
+  },
+  {
+    "ref": "RN1",
+    "pin": "1",
+    "pin_name": "R1A",
+    "net": "LV_VBLANK",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN1",
+    "pin": "2",
+    "pin_name": "R2A",
+    "net": "LV_PCLK",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN1",
+    "pin": "3",
+    "pin_name": "R3A",
+    "net": "LV_HBLANK",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN1",
+    "pin": "4",
+    "pin_name": "R4A",
+    "net": "LV_SDATA",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN1",
+    "pin": "8",
+    "pin_name": "R1B",
+    "net": "GP27",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN1",
+    "pin": "7",
+    "pin_name": "R2B",
+    "net": "GP28",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN1",
+    "pin": "6",
+    "pin_name": "R3B",
+    "net": "GP44",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN1",
+    "pin": "5",
+    "pin_name": "R4B",
+    "net": "GP22",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN2",
+    "pin": "1",
+    "pin_name": "R1A",
+    "net": "LV_LRCK",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN2",
+    "pin": "2",
+    "pin_name": "R2A",
+    "net": "LV_BCLK",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN2",
+    "pin": "3",
+    "pin_name": "R3A",
+    "net": "LV_DCK",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN2",
+    "pin": "4",
+    "pin_name": "R4A",
+    "net": "LV_RESET_N",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN2",
+    "pin": "8",
+    "pin_name": "R1B",
+    "net": "GP23",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN2",
+    "pin": "7",
+    "pin_name": "R2B",
+    "net": "GP24",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN2",
+    "pin": "6",
+    "pin_name": "R3B",
+    "net": "GP6",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN2",
+    "pin": "5",
+    "pin_name": "R4B",
+    "net": "GP7",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN3",
+    "pin": "1",
+    "pin_name": "R1A",
+    "net": "LV_B4",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN3",
+    "pin": "2",
+    "pin_name": "R2A",
+    "net": "LV_B3",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN3",
+    "pin": "3",
+    "pin_name": "R3A",
+    "net": "LV_B2",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN3",
+    "pin": "4",
+    "pin_name": "R4A",
+    "net": "LV_B1",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN3",
+    "pin": "8",
+    "pin_name": "R1B",
+    "net": "GP29",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN3",
+    "pin": "7",
+    "pin_name": "R2B",
+    "net": "GP30",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN3",
+    "pin": "6",
+    "pin_name": "R3B",
+    "net": "GP31",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN3",
+    "pin": "5",
+    "pin_name": "R4B",
+    "net": "GP32",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN4",
+    "pin": "1",
+    "pin_name": "R1A",
+    "net": "LV_B0",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN4",
+    "pin": "2",
+    "pin_name": "R2A",
+    "net": "LV_G4",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN4",
+    "pin": "3",
+    "pin_name": "R3A",
+    "net": "LV_G3",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN4",
+    "pin": "4",
+    "pin_name": "R4A",
+    "net": "LV_G2",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN4",
+    "pin": "8",
+    "pin_name": "R1B",
+    "net": "GP33",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN4",
+    "pin": "7",
+    "pin_name": "R2B",
+    "net": "GP34",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN4",
+    "pin": "6",
+    "pin_name": "R3B",
+    "net": "GP35",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN4",
+    "pin": "5",
+    "pin_name": "R4B",
+    "net": "GP36",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN5",
+    "pin": "1",
+    "pin_name": "R1A",
+    "net": "LV_G1",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN5",
+    "pin": "2",
+    "pin_name": "R2A",
+    "net": "LV_G0",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN5",
+    "pin": "3",
+    "pin_name": "R3A",
+    "net": "LV_R4",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN5",
+    "pin": "4",
+    "pin_name": "R4A",
+    "net": "LV_R3",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN5",
+    "pin": "8",
+    "pin_name": "R1B",
+    "net": "GP37",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN5",
+    "pin": "7",
+    "pin_name": "R2B",
+    "net": "GP38",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN5",
+    "pin": "6",
+    "pin_name": "R3B",
+    "net": "GP39",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN5",
+    "pin": "5",
+    "pin_name": "R4B",
+    "net": "GP40",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN6",
+    "pin": "1",
+    "pin_name": "R1A",
+    "net": "LV_R2",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN6",
+    "pin": "2",
+    "pin_name": "R2A",
+    "net": "LV_R1",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN6",
+    "pin": "3",
+    "pin_name": "R3A",
+    "net": "LV_R0",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN6",
+    "pin": "4",
+    "pin_name": "R4A",
+    "net": "IN0",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN6",
+    "pin": "8",
+    "pin_name": "R1B",
+    "net": "GP41",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN6",
+    "pin": "7",
+    "pin_name": "R2B",
+    "net": "GP42",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN6",
+    "pin": "6",
+    "pin_name": "R3B",
+    "net": "GP43",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN6",
+    "pin": "5",
+    "pin_name": "R4B",
+    "net": "GP45",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN7",
+    "pin": "1",
+    "pin_name": "R1A",
+    "net": "IN1",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN7",
+    "pin": "2",
+    "pin_name": "R2A",
+    "net": "IN2",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN7",
+    "pin": "3",
+    "pin_name": "R3A",
+    "net": "IN3",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN7",
+    "pin": "4",
+    "pin_name": "R4A",
+    "net": "FORCE_BLANK",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN7",
+    "pin": "8",
+    "pin_name": "R1B",
+    "net": "GP1",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN7",
+    "pin": "7",
+    "pin_name": "R2B",
+    "net": "GP2",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN7",
+    "pin": "6",
+    "pin_name": "R3B",
+    "net": "GP3",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN7",
+    "pin": "5",
+    "pin_name": "R4B",
+    "net": "GP4",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN8",
+    "pin": "1",
+    "pin_name": "R1A",
+    "net": "MODE7_CTX",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN8",
+    "pin": "2",
+    "pin_name": "R2A",
+    "net": "LV_OVER",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN8",
+    "pin": "3",
+    "pin_name": "R3A",
+    "net": "LV_TOUMEI",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN8",
+    "pin": "4",
+    "pin_name": "R4A",
+    "net": "SI2",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN8",
+    "pin": "8",
+    "pin_name": "R1B",
+    "net": "GP5",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN8",
+    "pin": "7",
+    "pin_name": "R2B",
+    "net": "GP8",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN8",
+    "pin": "6",
+    "pin_name": "R3B",
+    "net": "GP9",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN8",
+    "pin": "5",
+    "pin_name": "R4B",
+    "net": "GP10",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN9",
+    "pin": "1",
+    "pin_name": "R1A",
+    "net": "SI0",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN9",
+    "pin": "2",
+    "pin_name": "R2A",
+    "net": "HIRES",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN9",
+    "pin": "3",
+    "pin_name": "R3A",
+    "net": "SI6",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN9",
+    "pin": "4",
+    "pin_name": "R4A",
+    "net": "LV_FIELD",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN9",
+    "pin": "8",
+    "pin_name": "R1B",
+    "net": "GP11",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN9",
+    "pin": "7",
+    "pin_name": "R2B",
+    "net": "GP20",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN9",
+    "pin": "6",
+    "pin_name": "R3B",
+    "net": "GP21",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN9",
+    "pin": "5",
+    "pin_name": "R4B",
+    "net": "GP46",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN10",
+    "pin": "1",
+    "pin_name": "R1A",
+    "net": "LV_MCLK",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN10",
+    "pin": "2",
+    "pin_name": "R2A",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN10",
+    "pin": "3",
+    "pin_name": "R3A",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN10",
+    "pin": "4",
+    "pin_name": "R4A",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN10",
+    "pin": "8",
+    "pin_name": "R1B",
+    "net": "GP47",
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN10",
+    "pin": "7",
+    "pin_name": "R2B",
+    "net": null,
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN10",
+    "pin": "6",
+    "pin_name": "R3B",
+    "net": null,
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN10",
+    "pin": "5",
+    "pin_name": "R4B",
+    "net": null,
+    "kind": "RN4",
+    "sheet": "pulls"
+  },
+  {
+    "ref": "RN20",
+    "pin": "1",
+    "pin_name": "R1A",
+    "net": "SN_B4",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN20",
+    "pin": "2",
+    "pin_name": "R2A",
+    "net": "SN_B3",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN20",
+    "pin": "3",
+    "pin_name": "R3A",
+    "net": "SN_B2",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN20",
+    "pin": "4",
+    "pin_name": "R4A",
+    "net": "SN_B1",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN20",
+    "pin": "8",
+    "pin_name": "R1B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN20",
+    "pin": "7",
+    "pin_name": "R2B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN20",
+    "pin": "6",
+    "pin_name": "R3B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN20",
+    "pin": "5",
+    "pin_name": "R4B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN21",
+    "pin": "1",
+    "pin_name": "R1A",
+    "net": "SN_B0",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN21",
+    "pin": "2",
+    "pin_name": "R2A",
+    "net": "SN_G4",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN21",
+    "pin": "3",
+    "pin_name": "R3A",
+    "net": "SN_G3",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN21",
+    "pin": "4",
+    "pin_name": "R4A",
+    "net": "SN_G2",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN21",
+    "pin": "8",
+    "pin_name": "R1B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN21",
+    "pin": "7",
+    "pin_name": "R2B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN21",
+    "pin": "6",
+    "pin_name": "R3B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN21",
+    "pin": "5",
+    "pin_name": "R4B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN22",
+    "pin": "1",
+    "pin_name": "R1A",
+    "net": "SN_G1",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN22",
+    "pin": "2",
+    "pin_name": "R2A",
+    "net": "SN_G0",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN22",
+    "pin": "3",
+    "pin_name": "R3A",
+    "net": "SN_R4",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN22",
+    "pin": "4",
+    "pin_name": "R4A",
+    "net": "SN_R3",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN22",
+    "pin": "8",
+    "pin_name": "R1B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN22",
+    "pin": "7",
+    "pin_name": "R2B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN22",
+    "pin": "6",
+    "pin_name": "R3B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN22",
+    "pin": "5",
+    "pin_name": "R4B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN23",
+    "pin": "1",
+    "pin_name": "R1A",
+    "net": "SN_R2",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN23",
+    "pin": "2",
+    "pin_name": "R2A",
+    "net": "SN_R1",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN23",
+    "pin": "3",
+    "pin_name": "R3A",
+    "net": "SN_R0",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN23",
+    "pin": "4",
+    "pin_name": "R4A",
+    "net": "SN_PCLK",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN23",
+    "pin": "8",
+    "pin_name": "R1B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN23",
+    "pin": "7",
+    "pin_name": "R2B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN23",
+    "pin": "6",
+    "pin_name": "R3B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN23",
+    "pin": "5",
+    "pin_name": "R4B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN24",
+    "pin": "1",
+    "pin_name": "R1A",
+    "net": "SN_VBLANK",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN24",
+    "pin": "2",
+    "pin_name": "R2A",
+    "net": "SN_HBLANK",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN24",
+    "pin": "3",
+    "pin_name": "R3A",
+    "net": "SN_FIELD",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN24",
+    "pin": "4",
+    "pin_name": "R4A",
+    "net": "SN_OVER",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN24",
+    "pin": "8",
+    "pin_name": "R1B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN24",
+    "pin": "7",
+    "pin_name": "R2B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN24",
+    "pin": "6",
+    "pin_name": "R3B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN24",
+    "pin": "5",
+    "pin_name": "R4B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN25",
+    "pin": "1",
+    "pin_name": "R1A",
+    "net": "SN_TOUMEI",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN25",
+    "pin": "2",
+    "pin_name": "R2A",
+    "net": "SN_RESET_N",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN25",
+    "pin": "3",
+    "pin_name": "R3A",
+    "net": "SN_DCK",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN25",
+    "pin": "4",
+    "pin_name": "R4A",
+    "net": "SN_CSYNC",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN25",
+    "pin": "8",
+    "pin_name": "R1B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN25",
+    "pin": "7",
+    "pin_name": "R2B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN25",
+    "pin": "6",
+    "pin_name": "R3B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN25",
+    "pin": "5",
+    "pin_name": "R4B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN26",
+    "pin": "1",
+    "pin_name": "R1A",
+    "net": "SN_SDATA",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN26",
+    "pin": "2",
+    "pin_name": "R2A",
+    "net": "SN_LRCK",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN26",
+    "pin": "3",
+    "pin_name": "R3A",
+    "net": "SN_BCLK",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN26",
+    "pin": "4",
+    "pin_name": "R4A",
+    "net": "SN_PAWR_N",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN26",
+    "pin": "8",
+    "pin_name": "R1B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN26",
+    "pin": "7",
+    "pin_name": "R2B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN26",
+    "pin": "6",
+    "pin_name": "R3B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN26",
+    "pin": "5",
+    "pin_name": "R4B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN27",
+    "pin": "1",
+    "pin_name": "R1A",
+    "net": "SN_PARD_N",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN27",
+    "pin": "2",
+    "pin_name": "R2A",
+    "net": "SN_MCLK",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN27",
+    "pin": "3",
+    "pin_name": "R3A",
+    "net": "SN_PA0",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN27",
+    "pin": "4",
+    "pin_name": "R4A",
+    "net": "SN_PA1",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN27",
+    "pin": "8",
+    "pin_name": "R1B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN27",
+    "pin": "7",
+    "pin_name": "R2B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN27",
+    "pin": "6",
+    "pin_name": "R3B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN27",
+    "pin": "5",
+    "pin_name": "R4B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN28",
+    "pin": "1",
+    "pin_name": "R1A",
+    "net": "SN_PA2",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN28",
+    "pin": "2",
+    "pin_name": "R2A",
+    "net": "SN_PA3",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN28",
+    "pin": "3",
+    "pin_name": "R3A",
+    "net": "SN_PA4",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN28",
+    "pin": "4",
+    "pin_name": "R4A",
+    "net": "SN_PA5",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN28",
+    "pin": "8",
+    "pin_name": "R1B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN28",
+    "pin": "7",
+    "pin_name": "R2B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN28",
+    "pin": "6",
+    "pin_name": "R3B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN28",
+    "pin": "5",
+    "pin_name": "R4B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN29",
+    "pin": "1",
+    "pin_name": "R1A",
+    "net": "SN_PA6",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN29",
+    "pin": "2",
+    "pin_name": "R2A",
+    "net": "SN_PA7",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN29",
+    "pin": "3",
+    "pin_name": "R3A",
+    "net": "SN_D0",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN29",
+    "pin": "4",
+    "pin_name": "R4A",
+    "net": "SN_D1",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN29",
+    "pin": "8",
+    "pin_name": "R1B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN29",
+    "pin": "7",
+    "pin_name": "R2B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN29",
+    "pin": "6",
+    "pin_name": "R3B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN29",
+    "pin": "5",
+    "pin_name": "R4B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN30",
+    "pin": "1",
+    "pin_name": "R1A",
+    "net": "SN_D2",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN30",
+    "pin": "2",
+    "pin_name": "R2A",
+    "net": "SN_D3",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN30",
+    "pin": "3",
+    "pin_name": "R3A",
+    "net": "SN_D4",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN30",
+    "pin": "4",
+    "pin_name": "R4A",
+    "net": "SN_D5",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN30",
+    "pin": "8",
+    "pin_name": "R1B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN30",
+    "pin": "7",
+    "pin_name": "R2B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN30",
+    "pin": "6",
+    "pin_name": "R3B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN30",
+    "pin": "5",
+    "pin_name": "R4B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN31",
+    "pin": "1",
+    "pin_name": "R1A",
+    "net": "SN_D6",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN31",
+    "pin": "2",
+    "pin_name": "R2A",
+    "net": "SN_D7",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN31",
+    "pin": "3",
+    "pin_name": "R3A",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN31",
+    "pin": "4",
+    "pin_name": "R4A",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN31",
+    "pin": "8",
+    "pin_name": "R1B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN31",
+    "pin": "7",
+    "pin_name": "R2B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN31",
+    "pin": "6",
+    "pin_name": "R3B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "RN31",
+    "pin": "5",
+    "pin_name": "R4B",
+    "net": "GND",
+    "kind": "RN4",
+    "sheet": "bias"
+  },
+  {
+    "ref": "J11",
+    "pin": "1",
+    "pin_name": "3V3_HOST",
+    "net": "V3V3",
+    "kind": "POWER",
+    "sheet": "root"
+  },
+  {
+    "ref": "J11",
+    "pin": "2",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "POWER",
+    "sheet": "root"
+  },
+  {
+    "ref": "J11",
+    "pin": "3",
+    "pin_name": "5V_SNES",
+    "net": "V5_SNES",
+    "kind": "POWER",
+    "sheet": "root"
+  },
+  {
+    "ref": "J11",
+    "pin": "4",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "POWER",
+    "sheet": "root"
+  },
+  {
+    "ref": "U21",
+    "pin": "6",
+    "pin_name": "VDD",
+    "net": "V3V3",
+    "kind": "SUPERVISOR",
+    "sheet": "root"
+  },
+  {
+    "ref": "U21",
+    "pin": "5",
+    "pin_name": "SENSE",
+    "net": "V3V3",
+    "kind": "SUPERVISOR",
+    "sheet": "root"
+  },
+  {
+    "ref": "U21",
+    "pin": "3",
+    "pin_name": "~{MR}",
+    "net": "V3V3",
+    "kind": "SUPERVISOR",
+    "sheet": "root"
+  },
+  {
+    "ref": "U21",
+    "pin": "4",
+    "pin_name": "CT",
+    "net": "POR_CT",
+    "kind": "SUPERVISOR",
+    "sheet": "root"
+  },
+  {
+    "ref": "U21",
+    "pin": "2",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "SUPERVISOR",
+    "sheet": "root"
+  },
+  {
+    "ref": "U21",
+    "pin": "1",
+    "pin_name": "~{RESET}",
+    "net": "PGOOD",
+    "kind": "SUPERVISOR",
+    "sheet": "root"
+  },
+  {
+    "ref": "R1",
+    "pin": "1",
+    "pin_name": "1",
+    "net": "V3V3",
+    "kind": "R",
+    "sheet": "root"
+  },
+  {
+    "ref": "R1",
+    "pin": "2",
+    "pin_name": "2",
+    "net": "PGOOD",
+    "kind": "R",
+    "sheet": "root"
+  },
+  {
+    "ref": "C21",
+    "pin": "1",
+    "pin_name": "1",
+    "net": "POR_CT",
+    "kind": "C",
+    "sheet": "root"
+  },
+  {
+    "ref": "C21",
+    "pin": "2",
+    "pin_name": "2",
+    "net": "GND",
+    "kind": "C",
+    "sheet": "root"
+  },
+  {
+    "ref": "C22",
+    "pin": "1",
+    "pin_name": "1",
+    "net": "V3V3",
+    "kind": "C",
+    "sheet": "root"
+  },
+  {
+    "ref": "C22",
+    "pin": "2",
+    "pin_name": "2",
+    "net": "GND",
+    "kind": "C",
+    "sheet": "root"
+  },
+  {
+    "ref": "C26",
+    "pin": "1",
+    "pin_name": "1",
+    "net": "V5_SNES",
+    "kind": "C",
+    "sheet": "root"
+  },
+  {
+    "ref": "C26",
+    "pin": "2",
+    "pin_name": "2",
+    "net": "GND",
+    "kind": "C",
+    "sheet": "root"
+  },
+  {
+    "ref": "C23",
+    "pin": "1",
+    "pin_name": "1",
+    "net": "V3V3",
+    "kind": "C",
+    "sheet": "root"
+  },
+  {
+    "ref": "C23",
+    "pin": "2",
+    "pin_name": "2",
+    "net": "GND",
+    "kind": "C",
+    "sheet": "root"
+  },
+  {
+    "ref": "U22",
+    "pin": "1",
+    "pin_name": "~{1OE}",
+    "net": "RETURN_OE_N",
+    "kind": "AHCT125",
+    "sheet": "return"
+  },
+  {
+    "ref": "U22",
+    "pin": "2",
+    "pin_name": "1A",
+    "net": "TST_ACTIVE",
+    "kind": "AHCT125",
+    "sheet": "return"
+  },
+  {
+    "ref": "U22",
+    "pin": "4",
+    "pin_name": "~{2OE}",
+    "net": "V5_SNES",
+    "kind": "AHCT125",
+    "sheet": "return"
+  },
+  {
+    "ref": "U22",
+    "pin": "5",
+    "pin_name": "2A",
+    "net": "GND",
+    "kind": "AHCT125",
+    "sheet": "return"
+  },
+  {
+    "ref": "U22",
+    "pin": "10",
+    "pin_name": "~{3OE}",
+    "net": "V5_SNES",
+    "kind": "AHCT125",
+    "sheet": "return"
+  },
+  {
+    "ref": "U22",
+    "pin": "9",
+    "pin_name": "3A",
+    "net": "GND",
+    "kind": "AHCT125",
+    "sheet": "return"
+  },
+  {
+    "ref": "U22",
+    "pin": "13",
+    "pin_name": "~{4OE}",
+    "net": "V5_SNES",
+    "kind": "AHCT125",
+    "sheet": "return"
+  },
+  {
+    "ref": "U22",
+    "pin": "12",
+    "pin_name": "4A",
+    "net": "GND",
+    "kind": "AHCT125",
+    "sheet": "return"
+  },
+  {
+    "ref": "U22",
+    "pin": "14",
+    "pin_name": "VCC",
+    "net": "V5_SNES",
+    "kind": "AHCT125",
+    "sheet": "return"
+  },
+  {
+    "ref": "U22",
+    "pin": "7",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "AHCT125",
+    "sheet": "return"
+  },
+  {
+    "ref": "U22",
+    "pin": "3",
+    "pin_name": "1Y",
+    "net": "TST_EN_5V",
+    "kind": "AHCT125",
+    "sheet": "return"
+  },
+  {
+    "ref": "U22",
+    "pin": "6",
+    "pin_name": "2Y",
+    "net": null,
+    "kind": "AHCT125",
+    "sheet": "return"
+  },
+  {
+    "ref": "U22",
+    "pin": "8",
+    "pin_name": "3Y",
+    "net": null,
+    "kind": "AHCT125",
+    "sheet": "return"
+  },
+  {
+    "ref": "U22",
+    "pin": "11",
+    "pin_name": "4Y",
+    "net": null,
+    "kind": "AHCT125",
+    "sheet": "return"
+  },
+  {
+    "ref": "U23",
+    "pin": "2",
+    "pin_name": "A",
+    "net": "RETURN_ENABLE",
+    "kind": "OD_INV",
+    "sheet": "return"
+  },
+  {
+    "ref": "U23",
+    "pin": "5",
+    "pin_name": "VCC",
+    "net": "V3V3",
+    "kind": "OD_INV",
+    "sheet": "return"
+  },
+  {
+    "ref": "U23",
+    "pin": "3",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "OD_INV",
+    "sheet": "return"
+  },
+  {
+    "ref": "U23",
+    "pin": "1",
+    "pin_name": "NC",
+    "net": null,
+    "kind": "OD_INV",
+    "sheet": "return"
+  },
+  {
+    "ref": "U23",
+    "pin": "4",
+    "pin_name": "Y_OD",
+    "net": "RETURN_OE_N",
+    "kind": "OD_INV",
+    "sheet": "return"
+  },
+  {
+    "ref": "R2",
+    "pin": "1",
+    "pin_name": "1",
+    "net": "V5_SNES",
+    "kind": "R",
+    "sheet": "return"
+  },
+  {
+    "ref": "R2",
+    "pin": "2",
+    "pin_name": "2",
+    "net": "RETURN_OE_N",
+    "kind": "R",
+    "sheet": "return"
+  },
+  {
+    "ref": "R3",
+    "pin": "1",
+    "pin_name": "1",
+    "net": "TST_EN_5V",
+    "kind": "R",
+    "sheet": "return"
+  },
+  {
+    "ref": "R3",
+    "pin": "2",
+    "pin_name": "2",
+    "net": "TST_LIMIT",
+    "kind": "R",
+    "sheet": "return"
+  },
+  {
+    "ref": "JP1",
+    "pin": "1",
+    "pin_name": "1",
+    "net": "TST_LIMIT",
+    "kind": "JP",
+    "sheet": "return"
+  },
+  {
+    "ref": "JP1",
+    "pin": "2",
+    "pin_name": "2",
+    "net": "SN_TST15",
+    "kind": "JP",
+    "sheet": "return"
+  },
+  {
+    "ref": "R4",
+    "pin": "1",
+    "pin_name": "1",
+    "net": "SN_TST15",
+    "kind": "R",
+    "sheet": "return"
+  },
+  {
+    "ref": "R4",
+    "pin": "2",
+    "pin_name": "2",
+    "net": "GND",
+    "kind": "R",
+    "sheet": "return"
+  },
+  {
+    "ref": "R5",
+    "pin": "1",
+    "pin_name": "1",
+    "net": "TST_ACTIVE",
+    "kind": "R",
+    "sheet": "return"
+  },
+  {
+    "ref": "R5",
+    "pin": "2",
+    "pin_name": "2",
+    "net": "GND",
+    "kind": "R",
+    "sheet": "return"
+  },
+  {
+    "ref": "J12",
+    "pin": "1",
+    "pin_name": "PPU2_TST15",
+    "net": "SN_TST15",
+    "kind": "TSTPORT",
+    "sheet": "return"
+  },
+  {
+    "ref": "J12",
+    "pin": "2",
+    "pin_name": "GND",
+    "net": "GND",
+    "kind": "TSTPORT",
+    "sheet": "return"
+  },
+  {
+    "ref": "C24",
+    "pin": "1",
+    "pin_name": "1",
+    "net": "V5_SNES",
+    "kind": "C",
+    "sheet": "return"
+  },
+  {
+    "ref": "C24",
+    "pin": "2",
+    "pin_name": "2",
+    "net": "GND",
+    "kind": "C",
+    "sheet": "return"
+  },
+  {
+    "ref": "C25",
+    "pin": "1",
+    "pin_name": "1",
+    "net": "V3V3",
+    "kind": "C",
+    "sheet": "return"
+  },
+  {
+    "ref": "C25",
+    "pin": "2",
+    "pin_name": "2",
+    "net": "GND",
+    "kind": "C",
+    "sheet": "return"
+  }
+]

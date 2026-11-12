@@ -1,0 +1,2 @@
+PASS: 732 pin/net assignments; all 89 footprint pad sets; six voltage-domain buffers; 512 decoder vectors; 37 unique GPIOs.
+LIMIT: static connectivity only. Setup/hold, glitches, power sequencing, signal integrity and SNES compatibility require bench validation.
